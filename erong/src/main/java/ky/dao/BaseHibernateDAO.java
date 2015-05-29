@@ -6,11 +6,16 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class BaseDao {
 
+/**
+ * Data access object (DAO) for domain model
+ * @author MyEclipse Persistence Tools
+ */
+public class BaseHibernateDAO implements IBaseHibernateDAO {
+	
 	@Autowired
 	protected SessionFactory sessitonFactory;
-
+	
 	public Session getSession() {
 		return sessitonFactory.getCurrentSession();
 	}
@@ -23,5 +28,5 @@ public class BaseDao {
 		Session ss = getSession();
 		return ss.load(cls, id);
 	}
-
+	
 }

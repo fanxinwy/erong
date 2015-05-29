@@ -26,17 +26,16 @@
 		<property name="logAbandoned" value="true" />
 	</bean>
 
-	<bean id="mySessionFactory"
-		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+	<bean id="sessitonFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="mappingLocations">
 			<value>classpath:mappings/**/*.hbm.xml</value>
 		</property>
 		<property name="mappingJarLocations">
-			<value>WEB-INF/lib/runmu*.jar</value>
+			<value>WEB-INF/lib/ky*.jar</value>
 		</property>
 		<property name="packagesToScan">
-			<value>shengqianshu.entity.*</value>
+			<value>ky.entity.*</value>
 		</property>
 		<property name="hibernateProperties">
 			<props>

@@ -1,0 +1,269 @@
+@charset "utf-8";
+
+.mod-title b.ui-tips i,.confirm-clock i,.confirm-service .ui-service-tel i{ background:url("https://e.ydnsh.com/Content/images/header.png");background-position:-999px 0;background-repeat:no-repeat;}
+.ui-button-lorange input,.confirm-service .ui-service-online a,.bank-add-box h3 a.close{background:url("https://e.ydnsh.com/Content/images/button.png");background-position:-999px 0;background-repeat:no-repeat;}
+.ui-table-2 td .fillIn-input a{background:url("https://e.ydnsh.com/Content/images/icon.png");background-position:-999px 0;background-repeat:no-repeat;}
+
+.table_5{width:100%;}
+.table_5 td{padding:5px 0;font-size:12px;}
+.table_5 th{text-align:right;font-size:12px;}
+.table_5 .textFild{height:22px;line-height:22px;padding:2px;border:1px solid #b1b1b1;box-shadow:none;font-weight:400;font-size:12px;color:#666;}
+
+.result{ background:#fdfdef;border:solid 1px #cac052; border-radius:5px;margin:10px 0;box-shadow: 1px 1px 2px #ececd8 inset;behavior:url("https://e.ydnsh.com/Content/Styles/pie.htc");}
+.result ul{font-size:14px;padding:5px 0 5px 20px;}
+.result ul li{ line-height:30px;}
+.result ul li span{font-size:20px;color:#f00000;}
+.calculator_aniu{ margin:30px 0 0 0;padding-bottom:15px;text-align:center}
+.calculator_aniu input{ background:#ff9453;width:100px;height:30px; line-height:30px; padding-bottom:5px;color:#FFF;border:none;margin-right:12px;font-size:18px;font-family:"Microsoft YaHei"; cursor:pointer}
+.calculator_aniu input:hover{background:#f26d1c}
+.calculator_aniu input.reset{ margin:0;margin-left:30px;color:#FFF;background:#69b4ee;}
+.calculator_aniu input.reset:hover{ margin:0;margin-left:30px;color:#FFF;background:#469ee0;}
+
+.bank-add-box{background:#fff;border:solid 5px #888;border-radius:5px; position:absolute; overflow:hidden;top:0;behavior:url("https://e.ydnsh.com/Content/Styles/pie.htc");}
+.bank-add-box h3.title{height:40px;line-height:40px;color:#3571ba; text-indent:1em;background:#ececec; position:relative;}
+.bank-add-box h3 a.close{ background-position:-777px -102px; display:block;width:23px;height:23px; position:absolute;right:10px;top:10px;}
+.bank-add-box h3 a.close:hover{ background-position:-744px -102px;}
+.calculator-add{font-family:"simsun";font-size:14px;}
+.calculator-add input[type="text"]{border:solid 1px #c5c5c5;border-radius:2px;height:25px;padding:0 5px;color:#ababab;width:245px;line-height:25px;float:left;}
+.calculator-add select{color:#666;padding:5px 0;margin:0 10px 0 0;border:solid 1px #c5c5c5;}
+.bank-add-title2{font-size:14px;color:#666;font-family:"simsun";background:#e6f3fb;border:solid 1px #d4e3eb;height:33px;line-height:33px; text-indent:1em;margin:13px 20px;}
+.calculator-btn{margin:40px 0 50px 0; text-align:center;}
+.calculator-btn input{min-width:116px;padding:0 20px;height:40px;line-height:40px;color:#fff;border:none;background:#fbaa2c;font-size:16px;font-family:"Microsoft YaHei";margin:0 5px;border-radius:3px; cursor:pointer; text-align:center;behavior:url("https://e.ydnsh.com/Content/Styles/pie.htc");}
+.calculator-btn input.reset{background:#dbdada;color:#727272;}
+.calculator-btn input.alter{background:#3571ba;}
+.bank-alter-text{font-family:"simsun"; text-align:center;margin:35px 0;}
+.bank-alter-text .note-content{font-size:16px;margin-bottom:20px;}
+.calculator-add span{color:#f10;}
+.calculator-add .ui-tips{white-space:nowrap;position:absolute;left:465px;box-shadow:0 2px 2px #ddd; display:block;}
+.calculator-add .ui-tips i{position:absolute;left:-7px;top:1px;width:8px;height:24px;}
+.calculator-add .tips-note{color:#4879b5;border:solid 1px #a4ceeb;font-size:12px;font-family:"����";padding:2px 5px 2px 28px; background:#e7f4fa url("https://e.ydnsh.com/Content/images/icon_wrning.png") 6px 5px no-repeat;border-radius:2px;max-width:420px;min-height:22px;line-height:20px;behavior:url("https://e.ydnsh.com/Content/Styles/pie.htc");}
+.calculator-add .tips-note i{background:url("https://e.ydnsh.com/Content/images/arrow_left_01.gif") left center no-repeat}
+.calculator-add .tips-error{background:#faf7e7 url("https://e.ydnsh.com/Content/images/fh_xx.png") 6px 5px no-repeat;border:solid 1px #ebc5a4;font-size:12px;font-family:"����";min-height:22px;max-width:420px;padding:2px 5px 2px 28px;border-radius:2px;color:#de883b;line-height:20px;behavior:url("https://e.ydnsh.com/Content/Styles/pie.htc");}
+.calculator-add .tips-error i{background:url("https://e.ydnsh.com/Content/images/arrow_left_02.gif") left center no-repeat}
+.calculator-add .tips-correct{ background-position:-779px -51px;width:21px;height:21px; display:block;float:left;margin:4px 0 0 10px;}
+
+
+
+.blackBg{display:none;position:fixed;left:0;top:0;bottom:0;right:0;background:#000;opacity:0.6;filter:Alpha(opacity=60);z-index:20;}
+.w-list-1086{width:1086px;margin:20px auto;}
+.project-box{border:solid 2px #ffe7ce;background:#fff; position:relative;}
+.project-box .ui-search-tab{height:54px; position:absolute;left:-2px;top:-2px;width:1082px;background:#ffe7ce;border-left:solid 3px #C1161F;}
+.project-box .ui-search-tab ul{padding:0 0 0 43px;}
+.project-box .ui-search-tab ul li{float:left;font-size:18px;font-family:"Microsoft YaHei";height:43px;margin:11px 0 0 0;line-height:43px;}
+.project-box .ui-search-tab ul li a{color:#666; display:block;padding:0 30px;}
+.project-box .ui-search-tab ul li a:hover,.project-box .ui-search-tab ul li.current a{background:#fff;border-radius:5px 5px 0 0;behavior:url("https://e.ydnsh.com/Content/Styles/pie.htc");}
+.project-box .ui-help{ position:absolute;right:30px;top:20px; z-index:1; background-position:-84px -247px;padding:0 0 0 22px;cursor:pointer;}
+.project-text{margin:60px 0 0 0;padding:0 0 20px 0}
+.ui-search-item{border-bottom:dashed 1px #ddd;margin:0 35px;height:45px;font-size:13px;font-family:"Microsoft YaHei";color:#666; clear:both;}
+.ui-search-item span.ui-icon{ display:block; text-align:right;width:104px;float:left;line-height:45px;}
+.ui-search-item .ui-search-tag{float:left;}
+.ui-search-item a{padding:0 16px;color:#666;float:left; display:block;height:24px;line-height:24px;margin:12px 10px 0 0;}
+.ui-search-item a:hover,.ui-search-item a.current{background:#e8645a;border-radius:5px;color:#fff;behavior:url("https://e.ydnsh.com/Content/Styles/pie.htc");}
+.mod-project-inner{margin:20px 0 0 0;}
+.project-item .inner{height:68px;padding:6px 0;background:#fff;color:#666;font-family:"Microsoft YaHei";border:solid 1px #ececec;margin:0 0 16px 0; position:relative;}
+.project-item .inner h3{font-size:16px;margin:0 0 10px 0;float:left;}
+.project-item .inner h3 a{color:#666;font-weight:400;}
+.project-item .inner .pro-rate{font-size:36px; font-family:Tahoma, Geneva, sans-serif;color:#e8645a;}
+.project-item .inner .pro-date{font-size:18px;}
+.project-item table td.ui-line-1{border-right:solid 1px #ececec;}
+.project-item .pro-button{background:#febb5b;width:200px;height:46px;border-radius:5px; overflow:hidden;color:#fff;font-size:18px; position:relative;margin:0 16px 0 0;behavior:url("https://e.ydnsh.com/Content/Styles/pie.htc");}
+.project-item .pro-button span{background:#e8645a;width:30%; display:block;height:46px;float:left;}
+.project-item .pro-button a{font-weight:400; position:absolute;left:0;top:0; text-align:center;line-height:46px;width:200px;height:46px;color:#fff;}
+.project-item .pro-button-ok{background:#b8bcc4;}
+.project-item .pro-button-preheat{background:#56a5e1;}
+.project-item .pro-money{}
+.project-item .pro-money span{ display:block;float:left;width:40%;}
+.project-item .pro-name{margin:0 0 0 20px;}
+.project-bg{ background:url("https://e.ydnsh.com/Content/images/project_bg.png") no-repeat;width:100%;height:16px;position:absolute;left:0; bottom:-16px;}
+.project-item span.ui-icon{width:22px;height:24px; display:block;float:left;margin:0 0 0 10px;}
+.project-item span.icon-z{background:url("https://e.ydnsh.com/Content/images/icon_z.png") no-repeat;}
+.project-item span.icon-w{background:url("https://e.ydnsh.com/Content/images/icon_w.png") no-repeat;}
+.project-item span.icon-v{background:url("https://e.ydnsh.com/Content/images/icon_v.png") no-repeat;}
+
+
+.mod-top-margin{margin:50px 0 0 0;}
+.mod-detail{margin:0;background:#FFF;}
+.mod-detail .mod-content{padding:40px;border:solid #ececec;border-width:0 2px 0 2px;font-size:14px;font-family:"simsun";color:#666}
+.mod-wrap .mod-title{height:54px;line-height:54px;background:#ececec}
+.mod-wrap .mod-title span{height:54px;float:left;padding-left:15px;border-left:3px solid #fea515;font-family:"Microsoft YaHei";font-size:18px;color:#ef9400;}
+.mod-title b.ui-tips{font-weight:400;font-size:12px;font-family:"simsun";background:#fff5e8;border:solid 1px #ffc6a3;line-height:28px;height:28px; display:block;float:left;margin:13px 0 0 20px;padding:0 10px; position:relative;}
+.mod-title b.ui-tips img{ position:absolute;left:-5px;top:8px;}
+.mod-title b.ui-tips i{ background-position:-199px -250px;width:18px;height:16px; display:block;float:left;margin:6px 5px 0 0;}
+.mod-content{}
+.ui-table-2{}
+.ui-table-2 th{border-bottom:dashed 1px #d8d8d8;}
+.ui-table-2 th span{font-size:12px;font-family:"simsun";font-weight:400;color:#999;}
+.ui-table-2 td{border-bottom:dashed 1px #d8d8d8;}
+.ui-table-2 td p.red{font-size:24px; font-family:Verdana, Geneva, sans-serif;}
+.ui-table-2 td p.red b{font-weight:400;}
+.ui-table-2 td .fillIn-input{width:100px; position:relative;margin:0 auto;}
+.ui-table-2 td .fillIn-input input{width:45px;border:solid 1px #a7a6ac;height:30px;padding:0 5px;box-shadow:1px 1px 1px #c2c2c2 inset; text-align:right;font-size:24px;}
+.ui-table-2 td .fillIn-input a{width:18px;height:14px;display:block;position:absolute;}
+.ui-table-2 td .fillIn-input a.add{background-position:-337px -302px;left:60px;top:0;}
+.ui-table-2 td .fillIn-input a.add:hover{background-position:-358px -302px;}
+.ui-table-2 td .fillIn-input a.del{background-position:-337px -319px;left:60px;top:18px;}
+.ui-table-2 td .fillIn-input a.del:hover{background-position:-358px -319px;}
+.ui-table-1{border-left:solid 1px #d7d7d7;border-top:solid 1px #d7d7d7;margin:25px 0 0 0;}
+.ui-table-1 th{border-right:solid 1px #d7d7d7;border-bottom:solid 1px #d7d7d7;background:#eff5fb;}
+.ui-table-1 td{border-right:solid 1px #d7d7d7;border-bottom:solid 1px #d7d7d7;}
+
+.ui-form-other-note{border-top:dashed 1px #ccc;padding:50px 0 0 0;margin:50px 0 0 0;font-family:"simsun";}
+.ui-form-other-note p{font-size:14px;line-height:24px;color:#666;}
+.ui-form-other-fg{font-family:"simsun";}
+.ui-form-other-fg input[type="checkbox"]{float:left;margin:3px 10px 0 0;}
+.ui-button-lorange input.ui-button-2{ background-position:0 -461px;border:none;color:#fff;font-size:16px;width:182px;height:50px;font-family:"Microsoft YaHei";margin:15px 0 0 0;}
+.ui-button-lorange input.ui-button-2:hover{ background-position:0 -511px; cursor:pointer;}
+.confirm_bank{width:560px;}
+.confirm_bank_text{line-height:24px;margin:40px 0 50px 0;}
+.confirm_bank .title-pay{height:32px;line-height:32px;font-size:14px;color:#FF1100;font-weight:700;padding-right:30px}
+.bank-info{margin:10px 0 20px 15px;color:#666;}
+.bank-info h3{font-size:12px;font-weight:400;} 
+.bank-info table{border:solid 1px #c7ced6;background:#fff;margin:10px 0 0 0;}
+.bank-info table th{background:#e8eff7;padding:0 5px;}
+.bank-info table td{padding:0 5px;}
+.cash_model{margin:20px 0 0 0;}
+.cash_model .radioBox{float:left;height:28px;line-height:28px;margin:0 0 5px 12px;padding:2px 0;border:2px solid #ddd;background:#FFF;color:#555; cursor:pointer}
+.cash_model .focus{border:2px solid #f60;background:#FFF url("https://e.ydnsh.com/Content/images/icon_select_1.png") right bottom no-repeat;}
+.cash_model .radioBox span{display:block;height:30px;width:140px;}
+.cash_model ul li{float:left;margin:0 20px 5px 0;}
+.cash_model ul li input[type="radio"]{float:left;margin:10px 0 0 0; display:none;}
+.bank-logo {background-image: url("https://e.ydnsh.com/Content/images/bank.png");background-position: -999px 0;background-repeat: no-repeat;}
+.bank-card{background:url("https://e.ydnsh.com/Content/images/bank.png") no-repeat;}
+.bank-cmb{background-position:0 -33px;}
+.bank-icbc{background-position:0 0;}
+.bank-ccb{background-position:0 -67px;}
+.bank-abc{background-position:0 -99px;}
+.bank-boc{background-position:0 -132px;}
+.bank-comm{background-position:0 -330px;}
+.bank-pingan{background-position:0 -463px;}
+.bank-psbc{background-position:0 -493px;}
+.bank-shbc{background-position:0 -530px;}
+.bank-wzbc{background-position:0 -564px;}
+.bank-spdb{background-position:0 -166px;}
+.bank-ecitic{background-position:0 -398px;}
+.bank-cgbchina{background-position:0 -430px;}
+.bank-hxb{background-position:0 -600px;}
+.bank-cmbc{background-position:0 -362px;}
+.bank-cib{background-position:0 -230px;}
+.bank-cebbank{background-position:0 -296px;}
+.bank-srcb{background-position:0 -645px;}
+.bank-bankofbeijing{background-position:0 -265px;}
+.bank-bjrcb{background-position:0 -680px;}
+.bank-hebbank{background-position:-5px -640px;}
+.bank-hsbank{background-position:-5px -685px;}
+.bank-nbcb{background-position:0 -895px;} 
+.bank-qdccb{background-position:0 -938px;}
+.bank-lzbank{background-position:0 -983px;}
+.bank-hkbea{background-position:0 -730px;}
+.bank-of-tianjin{background-position:0 -1032px;}
+.bank-ydnsh{background-position:0 -1073px;}
+
+.confirm-receipt{width:331px;}
+.confirm-receipt .receipt{border:solid 1px #ece9d9;background:url("https://e.ydnsh.com/Content/images/receipt_bg.png") repeat-y;margin:10px 0 20px 0;padding:20px 17px 20px 23px;}
+.confirm-receipt .receipt h4{text-align:center;font-size:14px;color:#666;font-weight:700;padding:0 0 10px 0;}
+.confirm-receipt .receipt .date{text-align:center;margin:0 0 5px 0;color:#8d8d8d;padding:5px 0;font-size:12px;}
+.confirm-receipt .receipt ul{border-top:1px solid #e0dcad;line-height:38px;padding:5px 0;}
+.confirm-receipt .receipt-ts{font-size:12px;color:#999; text-align:right;margin:20px 0 0 0;}
+.confirm-clock{border:solid 1px #c5c5c5;background:#fbfbfb;padding:12px 0; overflow:hidden;line-height:34px;}
+.confirm-clock i{ background-position:-251px -123px;width:33px;height:33px; display:block;float:left;margin:0 20px;}
+.confirm-service{background:#ebebeb; overflow:hidden;margin:20px 0 0 0;font-family:"Microsoft YaHei";}
+.confirm-service .ui-service-tel{font-size:20px;line-height:60px;}
+.confirm-service .ui-service-tel i{ background-position:-326px -118px;width:31px;height:43px; display:block;float:left;margin:10px 15px 0 25px;}
+.confirm-service .ui-service-online a{ background-position:-304px 0;width:173px;height:41px; display:block;color:#fff;font-size:18px;line-height:41px; text-indent:75px;margin:10px auto 30px auto;}
+
+
+.table_5{width:100%;}
+.table_5 td{padding:5px 0;font-size:14px;}
+.table_5 td input[type="text"]{height:26px;border:solid 1px #ccc; padding:0 5px;color:#666;}
+.ui-bank{float:left;height:30px;line-height:30px;width:280px;border:1px solid #ccc;background:#FFF;position:relative}
+.ui-bank .bank-number{float:left}
+.change-status{background:#000;opacity:0.7;filter:Alpha(opacity=70);height:30px;width:280px; position:absolute;left:0;top:0;color:#fff; text-align:center;}
+.bank-select{height:30px;background:url("https://e.ydnsh.com/Content/images/arrow_4.png") right center no-repeat;}
+.bank-select .bank-logo,.bank-list .bank-logo {float:left;height:30px;margin-left:5px;width:125px;}
+.bank-list{background:#FFF;border:1px solid #CCCCCC;position:absolute;left:-1px;top:30px;box-shadow:0 2px 2px #ccc;display:none;width:100%; z-index:7;max-height:370px; overflow:auto;}
+.bank-list ul{float:left;width:100%}
+.bank-list ul li{float:left;padding:3px 0;width:100%;border-bottom:1px solid #eee;cursor:pointer}
+.table_5 .ui-link{}
+.table_5 .ui-link span{font-family:"simsun";margin:7px 15px 0 0;}
+.table_5 .ui-link a{background:#F1F3F5 url("https://e.ydnsh.com/Content/images/jia_1.png") 10px center no-repeat ;color: #57A1E1;display:block;font-family: "Microsoft YaHei";font-size: 16px;padding:10px 10px 10px 40px; text-decoration:none;float:left;border:dashed 1px #99c4e9;margin-top:-8px;}
+.table_5 .ui-link a:hover{background:#99c4e9 url("https://e.ydnsh.com/Content/images/jia_2.png") 10px center  no-repeat;color:#FFF;}
+
+.new-account{margin:7px 38px 0 20px;font-family:"simsun";}
+
+
+.ui-button-4{height:35px;padding:0 15px;background:url("https://e.ydnsh.com/Content/images/btn_02.png") 0 0 repeat-x;border:0px;border-radius:6px;color:#FFF;font-size:18px;cursor:pointer;behavior:url("https://e.ydnsh.com/Content/Styles/pie.htc");}
+.ui-button-4:hover{background-position:left bottom}
+.no-content{margin:0 auto;border:1px dashed #dfdfdf;border-radius:8px; background:#fff url("https://e.ydnsh.com/Content/images/no_content_1.gif") 130px center no-repeat;width:830px;height:280px; overflow:hidden;behavior:url("https://e.ydnsh.com/Content/Styles/pie.htc");}
+.no-content p{font-size:18px;margin:120px 0 0 330px;}
+.no-project{background:#fffbf5 url("https://e.ydnsh.com/Content/images/no_content_3.gif") center center no-repeat;width:100%;height:500px;}
+
+.ts {
+    color: #666666;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.pay-ok{border:solid 1px #ececec;background:#fff;margin:50px 0;padding:60px 65px;}
+.pay-ok h3{font-size:24px;color:#ef7c00; text-align:center;}
+.pay-ok h3 img{vertical-align:middle;margin:0 10px 0 0;}
+.pay-oktable{background:#fff0df;border:dashed 1px #f8c894;font-family:"simsun";font-size:14px;width:420px; margin:30px auto;padding:10px 0;}
+.pay-line{border-bottom:dashed 1px #cbcbcb;}
+.pay-ok-text{margin:30px 0 30px 260px;font-family:"simsun";font-size:12px;color:#666;line-height:30px;}
+.pay-ok-text a{line-height:29px;min-width:110px;color:#fff;background:#ee6751;margin:0 14px 0 0;float:left; text-align:center;border-radius:2px;behavior:url("https://e.ydnsh.com/Content/Styles/pie.htc");}
+.pay-ok-text a:hover{background:#dc432a;}
+.pay-ok-text a.pay-ok-bgblue{background:#3571ba;}
+.pay-ok-text a.pay-ok-bgblue:hover{background:#165aac;}
+.pay-ok-text a.pay-ok-yellow{background:#ff9b2c;}
+.pay-ok-text a.pay-ok-yellow:hover{background:#ff8600;}
+.pay-ok-text a.pay-ok-gray{background:#c1c1c1;}
+.pay-ok-text a.pay-ok-gray:hover{background:#a2a2a2;}
+
+
+
+.repayment-money{width:740px;border:solid 1px #e1e1e1;border-top:none;margin:0 auto;background:#fff; position:relative;}
+.repayment-money h3{font-size:18px;color:#333;background:url("https://e.ydnsh.com/Content/images/reg_29.png") no-repeat;height:109px;line-height:80px; text-align:center;}
+.repayment-money h3 span{color:#c1161f;}
+.repayment-money table{margin:0 auto;font-family:"simsun";font-size:14px;}
+.repayment-money-line{border-bottom:solid 1px #dbdbdb;}
+.repayment-money h2{color:#333;font-size:30px; text-align:center;margin:35px 0 50px 0;}
+.repayment-money ul{ overflow:hidden;width:693px;margin:0 auto;padding:0 0 70px 0;}
+.repayment-money ul li{float:left;width:230px; text-align:center;font-size:18px;}
+.repayment-money ul li p{font-size:14px;margin:15px 0 0 0;}
+.repayment-money-but{ text-align:center;margin:0 0 40px 0;}
+.repayment-money-but p{font-size:18px;margin:30px 0;}
+.repayment-money-but p span{color:#ff5151;font-size:24px;}
+.repayment-money-but input{background:url("https://e.ydnsh.com/Content/images/btn_login_1.png") repeat-x;border:none;height:46px;padding:0 50px;font-size:18px;color:#fff;border-radius:5px;font-family:"Microsoft YaHei";behavior:url("https://e.ydnsh.com/Content/Styles/pie.htc");}
+.repayment-money-but input:hover{background-position:left center; cursor:pointer;}
+.repayment-bottom{ position:absolute;left:-38px;bottom:-32px;}
+
+
+.enlarge-text{ position:absolute;top:140px;left:195px;font-size:16px;color:#edad00;font-family:"Microsoft YaHei";white-space:nowrap;}
+
+.searchSelet2{height:25px; width:243px; line-height:24px;margin:2px; position:relative; background:#fff; z-index:9; border:1px solid #d2d2d2; float:left;}
+.searchSelet2 .LB{float:left; width:243px; height:auto; color:#666; font-family:"����"; font-size:12px;}
+.searchSelet2 .txtList{position:absolute;left:-1px; top:24px; background:#FFF; border:1px solid #a9d3ef; z-index:200; width:243px; height:140px; display:none; }
+.searchSelet2 .txtList div.kk{ position:relative; width:243px; height:140px; overflow:hidden; }
+.searchSelet2 .txtList div.kk b{ display:block; height:40px;}
+.searchSelet2 .txtList div.kk div.a-list{ width:243px; height:140px; position:absolute; top:0px; overflow-y:auto; overflow-x:auto; z-index:99; }
+.searchSelet2 .txtList div.kk div.a-list a{ width:500px;display:block;line-height:20px;text-align:left;clear:both; color:#666; padding:2px 10px;}
+.searchSelet2 .txtList div.kk div.a-list a:hover{background:#3571ba;color:#fff;}
+.searchSelet2 .txtList div.kk div.a-list a.red{color:#f10; text-decoration:none;}
+.searchSelet2 .txtList div.kk div.a-list a.red:hover{color:#fff;}
+.searchSelet2 .txtList div.kk div.a-list p{padding:2px 10px;line-height:20px;margin:3px 0 0 0;}
+.searchSelet2 .txtList div.kk div.a-list span.a-list-k{ display:block; width:auto; height:auto; background:url("https://e.ydnsh.com/Content/images/empt.png") 50px 15px no-repeat; padding:20px 10px 20px 120px; line-height:40px;}
+.searchSelet2 .txt{height:24px;line-height:24px; overflow:hidden;}
+.searchSelet2 .txt-input{}
+.searchSelet2 .txt-input input[type="text"]{height:24px;line-height:24px;width:243px;border:none;}
+.searchSelet2 .txtList div.kk div.search-01{ width:245px; height:40px; overflow:hidden; background-color:#f0f0f0; position:absolute; left:0px; bottom:0px; z-index:98;}
+.searchSelet2 .txtList div.kk div.search-01 div{ width:230px; height:28px;  border:1px solid #e3e3e3; margin:5px; background:url("https://e.ydnsh.com/Content/images/icon_search.jpg") 200px 3px no-repeat; background-color:#fff;}
+.searchSelet2 .txtList div.kk div.search-01 div input{ border:0px; background:none;}
+.searchSelet2 .txtList div.kk div.search-01 div input.input-1{ width:170px; height:26px; overflow:hidden; text-indent:10px; color:#999; font-size:12px; float:left;}
+.searchSelet2 .txtList div.kk div.search-01 div input.input-2{ width:45px; height:26px; overflow:hidden; float:left; cursor:pointer;}
+
+.qrww{ width:80%; margin:auto; background:#ececec;}
+.qrww tr th{ font-weight:bold; text-align:right; width:20%;}
+.qrww tr td{ text-align:left;}
+.qrww tr th,.qrww tr td{ background:#fff; padding:15px 10px; font-size:14px; color:#666;}

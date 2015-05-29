@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+
+.w-980{width:980px;}
+.login-wrap{border:solid 1px #eaeaea;background:#fff;margin-bottom:40px;}
+.login-bg{background:url("../images/login_bg_03.gif") left bottom no-repeat;margin:10px 45px 3px 3px;overflow:hidden;}
+.w-305{width:305px;margin:30px 0 0 0;}
+.ui-form{font-family:"Microsoft YaHei";}
+.login-ui-input{background:#f5f5f5;border:solid 1px #d9d9d9;height:43px;line-height:43px;font-size:16px;color:#ccc;font-family:"Microsoft YaHei";border-radius:2px;box-shadow:1px 1px 2px #CCCCCC inset;behavior:url("https://e.ydnsh.com/Content/Styles/pie.htc");}
+.w-300{width:290px;padding-left:10px;}
+.ui-form-item{ position:relative;margin-bottom:20px;}
+.ui-form-item span.icon-zh{ background-position:5px 4px;width:48px;height:45px; position:absolute;left:0;top:0; background-color:#f69800;}
+.ui-form-item span.icon-mm{ background-position:-45px 4px;width:48px;height:45px; position:absolute;left:0;top:0; background-color:#f69800;}
+.ui-form-item .on-foucs{background:#FFF;color:#333;box-shadow:none;}
+.ui-form-item .login-note{position:absolute;top:8px;left:5px;color:#ccc;font-size:16px;background:#fff; display:block;padding:3px 8px;}
+.ui-error{font-size:16px;color:#e80000;}
+.ui-error b.icon-error{ background-position:-779px 0;width:22px;height:22px; display:block;float:left;margin:0 10px 0 5px;}
+.ui-form-other-fg{font-size:14px; margin:33px 0 14px 0; overflow:hidden;}
+.ui-form-other-fg a{color:#006ff7;}
+.ui-form-item input.lg-submit-btn{color:#fff; background-position:0 -75px;border:none;height:56px;width:299px;font-size:24px;font-family:"Microsoft YaHei";}
+.ui-form-item input.lg-submit-btn:hover{ background-position:0 -131px; cursor:pointer;}
+.ui-form-item input.lg-submit-btn-gray,.ui-form-item input.lg-submit-btn-gray:hover{background-position:-310px -75px;}
+.ui-form-item p.lg-form-other{font-size:14px;margin:17px 0;}
+.ui-form-item p.lg-form-other a.textlink{color:#006ff7; text-decoration:underline;}
+
+
+.reg-title{font-size:26px;font-family:"Microsoft YaHei";color:#ef8700;font-style:italic;margin:35px 0;}
+.reg-title span{font-size:32px;}
+.container{margin-bottom:40px;}
+.bg-white{background:#fff;}
+.ui-reg-tab{ overflow:hidden;}
+.ui-reg-tab ul li{float:left;text-indent:195px;font-size:24px;line-height:75px;font-family:"Microsoft YaHei";}
+.ui-reg-tab ul li a{color:#999;height:81px;width:490px;}
+.ui-reg-tab ul li a.ui-reg-phone{ background:url("https://e.ydnsh.com/Content/images/reg_17.png") no-repeat;display:block;}
+.ui-reg-tab ul li a.ui-reg-phone:hover,.ui-reg-tab ul li.current a.ui-reg-phone{ background:url("https://e.ydnsh.com/Content/images/reg_07.png") no-repeat;color:#fff;}
+.ui-reg-tab ul li a.ui-reg-mail{ background:url("https://e.ydnsh.com/Content/images/reg_08.png") no-repeat;display:block;}
+.ui-reg-tab ul li a.ui-reg-mail:hover{ background:url("https://e.ydnsh.com/Content/images/reg_18.png") no-repeat;color:#fff;}
+.labelContent{ display:none;}
+.dis-b{ display:block;}
+.reg-bg1{ background:url("https://e.ydnsh.com/Content/images/reg_13.png") right bottom no-repeat; overflow:hidden;}
+.reg-bg2{ background:url("https://e.ydnsh.com/Content/images/reg_15.png") right bottom no-repeat; overflow:hidden;}
+.reg-bg4{background:url("https://e.ydnsh.com/Content/images/reg_31.png") right bottom no-repeat; overflow:hidden;background-color:#fff;border:solid 1px #eaeaea;margin:50px auto;}
+
+.reg-box{margin:25px 0 100px 20px;font-size:16px;font-family:"Microsoft YaHei";color:#666;}
+.reg-box input.lg-input-normal{height:40px;border:solid 1px #ccc;font-size:16px;font-family:"Microsoft YaHei";color:#999; text-indent:15px;background:#FFF}
+.reg-box input.w-250{width:250px;}
+.reg-box input.w-150{width:150px;}
+.reg-box input.ui-button-text{ background-position:0 -217px;width:147px;height:43px;border:none;color:#fff;font-size:18px;font-family:"Microsoft YaHei";margin:20px 0 0 150px;}
+.reg-box input.ui-button-text:hover{ background-position:0 -260px; cursor:pointer;}
+.reg-box .link-login{margin:30px 0 0 10px;font-size:14px;font-family:"����";color:#666;}
+.reg-box input.ui-code-get{ background-position:-156px 0;color:#c67e4a;}
+.reg-box input.ui-code-sent{ background-position:-156px -32px;color:#747474;}
+.reg-box input.ui-code-but{border:none;width:118px;height:27px;font-size:12px; cursor:pointer;margin:0 0 0 10px;}
+.reg-form{margin:10px 0 20px 0; overflow:hidden;line-height:42px;}
+.ui-form-setpwd{margin:40px 0 80px 70px;}
+.tips-correct{ background-position:-779px -51px;width:21px;height:21px;margin:15px 0 0 13px;}
+.reg-form h3{border-bottom:dashed 1px #ddd;padding-bottom:10px; text-indent:1em;margin-bottom:40px;}
+.reg-form h3 span{font-size:14px;margin:0 0 0 20px;}
+
+.mail-box{border-radius:5px 5px 0 0;border:solid 1px #eaeaea;margin:50px 0;background:#fff url("https://e.ydnsh.com/Content/images/reg_19.png") 110px 90px no-repeat;behavior:url("https://e.ydnsh.com/Content/Styles/pie.htc");}
+.mail-title{background:#e8ae0f;height:42px;border-radius:5px 5px 0 0;color:#fff;line-height:42px;font-size:18px;font-family:"Microsoft YaHei"; text-indent:22px;behavior:url("https://e.ydnsh.com/Content/Styles/pie.htc");}
+.fb-text{margin:50px 150px 20px 200px;color:#666;font-family:"Microsoft YaHei";line-height:34px;border-bottom:dashed 1px #ccc;padding-bottom:15px;}
+.fb-text p.title{font-size:18px;}
+.fb-text p span{color:#ff6600;font-weight:700;font-size:14px;padding:0 15px 0 10px;}
+.fb-text p input.fb-check{background:#f08800;border:none;color:#fff;height:23px;line-height:23px;padding:0 15px;border-radius:3px;font-family:"Microsoft YaHei";behavior:url("https://e.ydnsh.com/Content/Styles/pie.htc");}
+.fb-text p input.fb-check:hover{ background:#e07f00; cursor:pointer;}
+.ui-mail-text{margin:0 0 50px 200px;font-size:14px;}
+.ui-mail-text-ask{color:#3571ba;}
+.ui-mail-text ul{background:#f4f4f4;line-height:28px;width:400px;padding:20px;margin:10px 0 0 0;color:#999;}
+.ui-mail-text ul li input{ background:#F08800;height:23px;line-height:23px;color:#fff;border:none;padding:0 15px;border-radius:3px;margin:0 0 0 10px;font-family:"Microsoft YaHei";}
+.ui-mail-text ul li input:hover{ background:#6ea2e0; cursor:pointer;}
+
+.white-box{background:#fff;border:solid 1px #eaeaea;margin:50px 0 0 0;}
+.complete-ts{margin:120px 0;}
+.complete-ts p img{ vertical-align:middle;margin:0 10px 0 0;}
+.complete-ts p{ text-align:center;font-size:24px;color:#ef8700;font-family:"Microsoft YaHei";line-height:38px;}
+.complete-name{margin:0 75px; overflow:hidden;padding:0 0 30px 0;}
+.ui-form-name{margin:0;font-size:18px;color:#666;}
+.ui-form-name input.ui-button-text{ background-position:0 -333px;width:177px;height:49px;border:none;font-size:18px;color:#fff;font-family:"Microsoft YaHei";margin:0 0 30px 0;}
+.ui-form-name input.ui-button-text:hover{ background-position:0 -382px; cursor:pointer;}
+.ui-button-lorange{ text-align:center;}
+
+
+.lg-username{position:relative;}
+.lg-username .on_changes{width:242px;position:absolute;top:42px;left:48px;list-style:none;background:#FFF;border:1px solid #ddd;display:none;padding:5px;z-index:99;}
+.lg-username .on_changes li{line-height:26px; text-indent:10px;}
+
+.w-100{width:150px; text-align:right;}
+.ui-input-box{ position:relative;}
+.error-ts{ position:absolute;right:8px;top:9px;}
+.correct-ts{ position:absolute;right:8px;top:9px;}
+.ts-red{font-size:14px;color:#f10;margin:0 0 0 150px; clear:both;}
+.ts-yellow{font-size:14px;color:#666;margin:0 0 0 150px;clear:blth;}
+.ts-yellow b{color:#f90;font-weight:normal;}
+
+.ptxx{ margin-left:150px; font-size:14px;}
+.ptxx input{ padding:0px 5px;}
+.ptxx a{ text-decoration:underline; color:#06C;}
+.ptxx a:hover{ color:#F00;}
+
+.fwxy{ font-size:14px; color:#666; margin-bottom:40px;}
+
+.ui-paw-pow{float:left;background:#e4e4e4;height:12px;width:100px;border-radius:10px}
+.ui-paw-pow span{display:block;height:12px;border-radius:10px;background:url("https://e.ydnsh.com/Content/images/jindu_bg.png")}
+.ui-paw-pow .ui-pow-1{background-position:0 0}
+.ui-paw-pow .ui-pow-2{background-position:0 -12px}
+.ui-paw-pow .ui-pow-3{background-position:0 -24px}
+.tips-clue{font-size:12px;margin-top:5px;margin:15px 0 10px 150px; overflow:hidden;}
+.tips-clue .ui-text{float:left;line-height:12px;margin-left:8px}
+
+.enlarge-text{ position:absolute;top:-40px;left:0;font-size:20px;color:#edad00;white-space:nowrap;}
+
+/************* reg ****注册页面*********/
+.reg{width:998px; height:auto; overflow:hidden; border:#e5e5e5 1px solid; background:#fff; margin:0 auto;}
+.reg h3{background:url(../images/reg_tt.png) no-repeat; width:100%; height:43px;}
+.reg h3.reg_tt1{background-position:0 0;}
+.reg h3.reg_tt2{background-position:0 -53px;}
+.reg h3.reg_tt3{background-position:0 -106px;}
+.reg h3.reg_tt4{background-position:0 -150px;}
+
+.reg ul{margin:50px 0 100px 20px; width:auto; height:auto; overflow:hidden; font-size:14px;}
+.reg ul li{width:100%; height:auto; overflow:hidden; margin-bottom:15px;}
+.reg ul li label{float:left; width:80px; line-height:45px; text-align:right; padding-right:10px;}
+.reg ul li input{float:left; outline-color:#f3485a; height:45px; border:#c5c5c5 1px solid; line-height:45px; text-indent:10px; color:#666666; width:320px; margin-right:10px;}
+.reg ul li img.fleft{margin:12px 10px 0 0;}
+.reg ul li a.fleft{margin:14px 0 0;}
+.reg ul li font{display:block; float:left; line-height:45px;}
+.reg ul li font.tips{background:#fff7d8; height:45px; line-height:45px; padding:0 5px;}
+.reg ul li.formBtn {padding-left:90px;}
+.reg ul li.formBtn input{width:auto; height:auto; border:0;}
+.reg ul li.formBtn input.btnRed_F{border:0; width:230px; height:40px; line-height:40px; color:#fff;}
+
+.reg h1{text-align:center; font-size:30px; margin:80px auto 30px;}
+.reg h2{text-align:center; font-size:20px; margin:0 0 200px;}

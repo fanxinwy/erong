@@ -14,14 +14,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class BaseHibernateDAO implements IBaseHibernateDAO {
 	
 	@Autowired
-	protected SessionFactory sessitonFactory;
+	protected SessionFactory sessionFactory;
 	
 	public Session getSession() {
-		return sessitonFactory.getCurrentSession();
+		return sessionFactory.getCurrentSession();
 	}
 
 	public Session getNewSession() {
-		return sessitonFactory.openSession();
+		return sessionFactory.openSession();
 	}
 
 	public Object load(Class<?> cls, Serializable id) {

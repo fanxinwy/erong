@@ -5,7 +5,8 @@
 
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
 		init-method="init" destroy-method="close">
-		<property name="url" value="jdbc:mysql://172.16.171.90:3306/erong?useUnicode=true&amp;characterEncoding=UTF-8" />
+		<property name="url"
+			value="jdbc:mysql://172.16.171.90:3306/erong?useUnicode=true&amp;characterEncoding=UTF-8" />
 		<property name="username" value="root" />
 		<property name="password" value="bsoft" />
 		<property name="filters" value="stat" />
@@ -20,13 +21,15 @@
 		<property name="testOnBorrow" value="false" />
 		<property name="testOnReturn" value="false" />
 		<property name="poolPreparedStatements" value="true" />
-		<property name="maxPoolPreparedStatementPerConnectionSize" value="100" />
+		<property name="maxPoolPreparedStatementPerConnectionSize"
+			value="100" />
 		<property name="removeAbandoned" value="true" />
 		<property name="removeAbandonedTimeout" value="1800" />
 		<property name="logAbandoned" value="true" />
 	</bean>
 
-	<bean id="sessitonFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="mappingLocations">
 			<value>classpath:mappings/**/*.hbm.xml</value>
@@ -52,5 +55,12 @@
 				<prop key="hibernate.jdbc.batch_size">50</prop>
 			</props>
 		</property>
+	</bean>
+
+	<!-- <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"> 
+		<property name="dataSource" ref="dataSource" /> </bean> -->
+
+	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 </beans>

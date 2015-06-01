@@ -17,16 +17,17 @@ public class BaseHibernateDAO implements IBaseHibernateDAO {
 	protected SessionFactory sessionFactory;
 	
 	public Session getSession() {
-		return sessionFactory.getCurrentSession();
-	}
-
-	public Session getNewSession() {
+//		return sessionFactory.getCurrentSession();
 		return sessionFactory.openSession();
 	}
 
-	public Object load(Class<?> cls, Serializable id) {
-		Session ss = getSession();
-		return ss.load(cls, id);
-	}
+//	public Session getNewSession() {
+//		return sessionFactory.openSession();
+//	}
+//
+//	public Object load(Class<?> cls, Serializable id) {
+//		Session ss = getSession();
+//		return ss.load(cls, id);
+//	}
 	
 }

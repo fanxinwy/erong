@@ -2,12 +2,13 @@ package ky.mvc.controller;
 
 import java.io.IOException;
 
-import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 import ky.entity.KyAccount;
 import ky.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -37,10 +38,12 @@ public class UserRestfulController {
 		return ka;
 	}
 	
-	@RequestMapping(value="logon",method=RequestMethod.POST,headers="application/json")
-	public void logon(@RequestBody KyAccount body){
+	@RequestMapping(value="logon",method=RequestMethod.POST,headers="content-type=application/json")
+	public void logon(@Valid @RequestBody KyAccount body, BindingResult result){
 		System.out.println(body.getAccount());
 		System.out.println(body.getLastsignintime());
+		System.out.println(body.getEmail());
+		System.out.println(result.getAllErrors());
 //		ObjectMapper mapper = new ObjectMapper();
 //		KyAccount ka = null;
 //		try {

@@ -14,8 +14,20 @@ public class UserService {
 	private KyAccountDAO kyAccountDAO;
 	
 	@Transactional
-	public void save(KyAccount transientInstance){
-		kyAccountDAO.save(transientInstance);
+	public void save(KyAccount ka){
+		kyAccountDAO.save(ka);
+	}
+	
+	
+	public KyAccount logon(KyAccount ka){
+		String phonenumb = ka.getPhonenumb();
+		String account = ka.getAccount();
+		
+		kyAccountDAO.findByPhonenumb(phonenumb);
+		
+//		kyAccountDAO.fin
+		
+		return null;
 	}
 	
 

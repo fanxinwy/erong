@@ -10,7 +10,7 @@
 	<context:component-scan base-package="ky.mvc.controller,ky.dao.support,ky.service" />
 
 	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
-	<mvc:annotation-driven />
+	<mvc:annotation-driven validator="validator" />
 	<mvc:default-servlet-handler />
 	
 	<mvc:interceptors>
@@ -18,7 +18,12 @@
 		<bean class="ky.mvc.interceptor.AuthInterceptor" />
 	</mvc:interceptors>
 	
-	<mvc:view-controller path="/" view-name="forward:/index.html"/>
+	<!-- <mvc:annotation-driven validator="validator" /> -->
+	<!-- <mvc:view-controller path="/" view-name="forward:/index.html" /> -->
 	<!-- <mvc:view-controller path="/" view-name="redirect:index.html"/> -->
+	
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+        <property name="providerClass"  value="org.hibernate.validator.HibernateValidator" />
+	</bean>
 	
 </beans>

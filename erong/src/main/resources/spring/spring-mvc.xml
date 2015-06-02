@@ -13,4 +13,12 @@
 	<mvc:annotation-driven />
 	<mvc:default-servlet-handler />
 	
+	<mvc:interceptors>
+		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" />
+		<bean class="ky.mvc.interceptor.AuthInterceptor" />
+	</mvc:interceptors>
+	
+	<mvc:view-controller path="/" view-name="forward:/index.html"/>
+	<!-- <mvc:view-controller path="/" view-name="redirect:index.html"/> -->
+	
 </beans>

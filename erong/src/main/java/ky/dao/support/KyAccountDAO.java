@@ -12,7 +12,6 @@ import org.hibernate.Query;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 /**
  * A data access object (DAO) providing persistence and search support for
@@ -43,7 +42,6 @@ public class KyAccountDAO extends BaseHibernateDAO {
 	public static final String SECUREQUESTION = "securequestion";
 	public static final String SECUREANSWER = "secureanswer";
 
-	@Transactional
 	public void save(KyAccount transientInstance) {
 		log.debug("saving KyAccount instance");
 		try {

@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import ky.dao.support.KyAccountDAO;
 import ky.entity.KyAccount;
+import ky.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,7 +19,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class UserRestfulController {
 	
 	@Autowired
-	private KyAccountDAO kyAccountDAO;
+	private UserService userService;
 	
 	
 	@RequestMapping("register")
@@ -28,7 +29,7 @@ public class UserRestfulController {
 		KyAccount ka = null;
 		try {
 			ka = mapper.readValue(body, KyAccount.class);
-			kyAccountDAO.save(ka);
+			userService.save(ka);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

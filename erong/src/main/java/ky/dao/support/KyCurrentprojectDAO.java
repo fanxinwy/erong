@@ -4,7 +4,7 @@ import static org.hibernate.criterion.Example.create;
 
 import java.util.List;
 
-import ky.dao.BaseHibernateDAO;
+import ky.dao.BaseDAO;
 import ky.entity.KyCurrentproject;
 
 import org.hibernate.LockOptions;
@@ -23,9 +23,8 @@ import org.slf4j.LoggerFactory;
  * @see root.bean.KyCurrentproject
  * @author MyEclipse Persistence Tools
  */
-public class KyCurrentprojectDAO extends BaseHibernateDAO {
-	private static final Logger log = LoggerFactory
-			.getLogger(KyCurrentprojectDAO.class);
+public class KyCurrentprojectDAO extends BaseDAO {
+	private static final Logger log = LoggerFactory.getLogger(KyCurrentprojectDAO.class);
 	// property constants
 	public static final String PROJECTNAME = "projectname";
 	public static final String PROJECTCODE = "projectcode";
@@ -57,8 +56,7 @@ public class KyCurrentprojectDAO extends BaseHibernateDAO {
 	public KyCurrentproject findById(java.lang.Long id) {
 		log.debug("getting KyCurrentproject instance with id: " + id);
 		try {
-			KyCurrentproject instance = (KyCurrentproject) getSession().get(
-					"root.bean.KyCurrentproject", id);
+			KyCurrentproject instance = (KyCurrentproject) getSession().get("root.bean.KyCurrentproject", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);
@@ -70,10 +68,8 @@ public class KyCurrentprojectDAO extends BaseHibernateDAO {
 		log.debug("finding KyCurrentproject instance by example");
 		try {
 			List<KyCurrentproject> results = (List<KyCurrentproject>) getSession()
-					.createCriteria("root.bean.KyCurrentproject")
-					.add(create(instance)).list();
-			log.debug("find by example successful, result size: "
-					+ results.size());
+					.createCriteria("root.bean.KyCurrentproject").add(create(instance)).list();
+			log.debug("find by example successful, result size: " + results.size());
 			return results;
 		} catch (RuntimeException re) {
 			log.error("find by example failed", re);
@@ -82,11 +78,9 @@ public class KyCurrentprojectDAO extends BaseHibernateDAO {
 	}
 
 	public List findByProperty(String propertyName, Object value) {
-		log.debug("finding KyCurrentproject instance with property: "
-				+ propertyName + ", value: " + value);
+		log.debug("finding KyCurrentproject instance with property: " + propertyName + ", value: " + value);
 		try {
-			String queryString = "from KyCurrentproject as model where model."
-					+ propertyName + "= ?";
+			String queryString = "from KyCurrentproject as model where model." + propertyName + "= ?";
 			Query queryObject = getSession().createQuery(queryString);
 			queryObject.setParameter(0, value);
 			return queryObject.list();
@@ -127,8 +121,7 @@ public class KyCurrentprojectDAO extends BaseHibernateDAO {
 	public KyCurrentproject merge(KyCurrentproject detachedInstance) {
 		log.debug("merging KyCurrentproject instance");
 		try {
-			KyCurrentproject result = (KyCurrentproject) getSession().merge(
-					detachedInstance);
+			KyCurrentproject result = (KyCurrentproject) getSession().merge(detachedInstance);
 			log.debug("merge successful");
 			return result;
 		} catch (RuntimeException re) {

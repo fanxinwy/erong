@@ -4,7 +4,7 @@ import static org.hibernate.criterion.Example.create;
 
 import java.util.List;
 
-import ky.dao.BaseHibernateDAO;
+import ky.dao.BaseDAO;
 import ky.entity.KyAccount;
 
 import org.hibernate.LockOptions;
@@ -25,7 +25,7 @@ import org.springframework.stereotype.Repository;
  * @author MyEclipse Persistence Tools
  */
 @Repository
-public class KyAccountDAO extends BaseHibernateDAO {
+public class KyAccountDAO extends BaseDAO {
 	private static final Logger log = LoggerFactory
 			.getLogger(KyAccountDAO.class);
 	// property constants
@@ -79,11 +79,9 @@ public class KyAccountDAO extends BaseHibernateDAO {
 	public List<KyAccount> findByExample(KyAccount instance) {
 		log.debug("finding KyAccount instance by example");
 		try {
-			List<KyAccount> results = (List<KyAccount>) getSession()
-					.createCriteria("root.bean.KyAccount")
+			List<KyAccount> results = (List<KyAccount>) getSession().createCriteria("ky.entity.KyAccount")
 					.add(create(instance)).list();
-			log.debug("find by example successful, result size: "
-					+ results.size());
+			log.debug("find by example successful, result size: " + results.size());
 			return results;
 		} catch (RuntimeException re) {
 			log.error("find by example failed", re);

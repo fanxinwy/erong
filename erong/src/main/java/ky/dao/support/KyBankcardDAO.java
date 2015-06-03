@@ -4,7 +4,7 @@ import static org.hibernate.criterion.Example.create;
 
 import java.util.List;
 
-import ky.dao.BaseHibernateDAO;
+import ky.dao.BaseDAO;
 import ky.entity.KyBankcard;
 
 import org.hibernate.LockOptions;
@@ -23,7 +23,7 @@ import org.slf4j.LoggerFactory;
  * @see root.bean.KyBankcard
  * @author MyEclipse Persistence Tools
  */
-public class KyBankcardDAO extends BaseHibernateDAO {
+public class KyBankcardDAO extends BaseDAO {
 	private static final Logger log = LoggerFactory
 			.getLogger(KyBankcardDAO.class);
 	// property constants
@@ -73,7 +73,7 @@ public class KyBankcardDAO extends BaseHibernateDAO {
 		log.debug("finding KyBankcard instance by example");
 		try {
 			List<KyBankcard> results = (List<KyBankcard>) getSession()
-					.createCriteria("root.bean.KyBankcard")
+					.createCriteria("ky.entity.KyBankcard")
 					.add(create(instance)).list();
 			log.debug("find by example successful, result size: "
 					+ results.size());

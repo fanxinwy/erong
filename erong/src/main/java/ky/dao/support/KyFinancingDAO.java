@@ -4,7 +4,7 @@ import static org.hibernate.criterion.Example.create;
 
 import java.util.List;
 
-import ky.dao.BaseHibernateDAO;
+import ky.dao.BaseDAO;
 import ky.entity.KyFinancing;
 
 import org.hibernate.LockOptions;
@@ -23,7 +23,7 @@ import org.slf4j.LoggerFactory;
  * @see root.bean.KyFinancing
  * @author MyEclipse Persistence Tools
  */
-public class KyFinancingDAO extends BaseHibernateDAO {
+public class KyFinancingDAO extends BaseDAO {
 	private static final Logger log = LoggerFactory
 			.getLogger(KyFinancingDAO.class);
 	// property constants

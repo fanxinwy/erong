@@ -1,6 +1,6 @@
 package ky.service;
 
-import ky.dao.support.KyAccountDAO;
+import ky.dao.BaseDAO;
 import ky.entity.KyAccount;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,19 +11,20 @@ import org.springframework.transaction.annotation.Transactional;
 public class UserService {
 	
 	@Autowired
-	private KyAccountDAO kyAccountDAO;
+	private BaseDAO dao;
 	
 	@Transactional
 	public void save(KyAccount ka){
-		kyAccountDAO.save(ka);
+		dao.save(KyAccount.class, ka);
 	}
 	
 	
 	public KyAccount logon(KyAccount ka){
 		String phonenumb = ka.getPhonenumb();
+		String email = ka.getEmail();
 		String account = ka.getAccount();
 		
-		kyAccountDAO.findByPhonenumb(phonenumb);
+		dao.findByProperty(KyAccount.class, "phonenumb", phonenumb);
 		
 //		kyAccountDAO.fin
 		

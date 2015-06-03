@@ -17,6 +17,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import static org.hibernate.criterion.Example.create;
+
 @Repository
 public class BaseDAO implements IBaseDAO {
 
@@ -88,6 +90,19 @@ public class BaseDAO implements IBaseDAO {
 			return queryObject.list();
 		} catch (RuntimeException re) {
 			log.error("finding {} instance with property: {}, value: {} falied", cls.getSimpleName(), propertyName, value, re);
+			throw re;
+		}
+	}
+	
+	@SuppressWarnings("unchecked")
+	public <T> List<T> findByExample(Class<T> cls, T instance) {
+		log.debug("finding KyAccount instance by example {}", instance);
+		try {
+			List<T> results = (List<T>) getSession().createCriteria(cls).add(create(instance)).list();
+			log.debug("find by example successful, result size: " + results.size());
+			return results;
+		} catch (RuntimeException re) {
+			log.error("finding KyAccount instance by example {} falied", instance, re);
 			throw re;
 		}
 	}

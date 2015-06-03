@@ -1,6 +1,7 @@
 package ky.mvc.controller;
 
-import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.validation.Valid;
 
@@ -14,44 +15,31 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 @RestController
 @RequestMapping("user")
-public class UserRestfulController {
+public class UserController {
 	
 	@Autowired
 	private UserService userService;
 	
 	
-	@RequestMapping("register")
-	public KyAccount getUser(@RequestBody String body){
-		System.out.println(body);
-		ObjectMapper mapper = new ObjectMapper();
-		KyAccount ka = null;
+	@RequestMapping(value="register",method=RequestMethod.POST,headers="content-type=application/json")
+	public KyAccount getUser(@Valid @RequestBody KyAccount body, BindingResult result){
 		try {
-			ka = mapper.readValue(body, KyAccount.class);
-			userService.save(ka);
-		} catch (IOException e) {
+			userService.save(body);
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return ka;
+		return body;
 	}
 	
 	@RequestMapping(value="logon",method=RequestMethod.POST,headers="content-type=application/json")
-	public void logon(@Valid @RequestBody KyAccount body, BindingResult result){
-		System.out.println(body.getAccount());
-		System.out.println(body.getLastsignintime());
-		System.out.println(body.getEmail());
-		System.out.println(result.getAllErrors());
-//		ObjectMapper mapper = new ObjectMapper();
-//		KyAccount ka = null;
-//		try {
-//			ka = mapper.readValue(body, KyAccount.class);
-//			System.out.println(ka);
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
+	public Map<String, Object> logon(@RequestBody KyAccount body){
+		String account = body.getAccount();
+		
+		Map<String, Object> r = new HashMap<String, Object>();
+		System.out.println(body);
+		return r;
 	}
 	
 	

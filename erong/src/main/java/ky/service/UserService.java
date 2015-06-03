@@ -1,5 +1,7 @@
 package ky.service;
 
+import java.util.List;
+
 import ky.dao.BaseDAO;
 import ky.entity.KyAccount;
 
@@ -20,14 +22,13 @@ public class UserService {
 	
 	
 	public KyAccount logon(KyAccount ka){
-		String phonenumb = ka.getPhonenumb();
-		String email = ka.getEmail();
+//		String phonenumb = ka.getPhonenumb();
+//		String email = ka.getEmail();
 		String account = ka.getAccount();
-		
-		dao.findByProperty(KyAccount.class, "phonenumb", phonenumb);
-		
-//		kyAccountDAO.fin
-		
+		List<KyAccount> list = dao.findByProperty(KyAccount.class, "account", account);
+		if(list != null && list.size() > 0){
+			return list.get(0);
+		}		
 		return null;
 	}
 	

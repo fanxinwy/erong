@@ -10,6 +10,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
+import javax.validation.constraints.Pattern;
+
+import ky.service.UserService;
 
 import org.hibernate.validator.constraints.Email;
 
@@ -85,6 +88,7 @@ public class KyAccount implements java.io.Serializable {
 	}
 
 	@Column(name = "account", unique = true, nullable = false, length = 30)
+	@Pattern(regexp=UserService.regexAccount,message="account is not valid")
 	public String getAccount() {
 		return this.account;
 	}
@@ -103,6 +107,7 @@ public class KyAccount implements java.io.Serializable {
 	}
 
 	@Column(name = "phonenumb", unique = true, nullable = false, length = 11)
+	@Pattern(regexp=UserService.regexPhonenumb,message="phone is not valid")
 	public String getPhonenumb() {
 		return this.phonenumb;
 	}

@@ -24,7 +24,7 @@ public class UserController {
 	
 	
 	@RequestMapping(value="register",method=RequestMethod.POST,headers="content-type=application/json")
-	public KyAccount getUser(@Valid @RequestBody KyAccount body, BindingResult result){
+	public KyAccount register(@Valid @RequestBody KyAccount body, BindingResult result){
 		try {
 			userService.save(body);
 		} catch (Exception e) {
@@ -34,12 +34,8 @@ public class UserController {
 	}
 	
 	@RequestMapping(value="logon",method=RequestMethod.POST,headers="content-type=application/json")
-	public Map<String, Object> logon(@RequestBody KyAccount body){
-		String account = body.getAccount();
-		
-		Map<String, Object> r = new HashMap<String, Object>();
-		System.out.println(body);
-		return r;
+	public KyAccount logon(@RequestBody KyAccount body){
+		return userService.logon(body);
 	}
 	
 	

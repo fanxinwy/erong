@@ -663,15 +663,17 @@ function RunHeightChangeTimer() {
 //加载模板
 function RenderTmpl(config) {
     $.ajax({
-        url: '/Ajax/ProcessRequest',
+        url:config.Url,
         type: 'post',
-        data: config.Data,
-        dataType: 'text',
+        data: ToJson(config.Data),
+        dataType: "text",
+        contentType:'application/json',
         async: config.Async || true,
         error: function (err) {
             //alert("脚本执行异常，请刷新页面重试(ajax error)：" + err.statusText);
         },
         success: function (result) {
+        alert(result);
             var jsonResult = JSON.parse(result);
             if (jsonResult.IsSuccess == true) {
                 if (config.SucessFn) {

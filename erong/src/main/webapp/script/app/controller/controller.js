@@ -28,3 +28,15 @@ app.controller('p2pList',function($scope){
         {text:'e融安稳融资项目',id:'TY20150010',income:'7.00',scale:'200.00',dateline:180,image:'back_logo_03.gif',status:1,min:1000}
     ];
 });
+
+app.controller('Ctrl',function($scope){
+    $scope.list = [];
+    $scope.text = 'hello';
+    $scope.submit = function() {
+        alert("======");
+        if ($scope.text) {
+            $scope.list.push(this.text);
+            $scope.text = '';
+        }
+    };
+});

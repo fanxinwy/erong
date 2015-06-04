@@ -18,7 +18,7 @@ public class UserService {
 	public static final String TOKEN = "$token";
 	public static final String regexPhonenumb = "^1[3-9][0-9]{9}$";
 	public static final String regexEmail = "^(\\w)+(\\.\\w+)*@(\\w)+((\\.\\w+)+)$";
-	public static final String regexAccount = "^[a-zA-Z_][a-zA-Z0-9]{3,15}$";
+	public static final String regexAccount = "^[a-zA-Z_][a-zA-Z0-9]{1,15}$";
 	private Pattern pPhonenumb = Pattern.compile(regexPhonenumb);
 	private Pattern pEmail = Pattern.compile(regexEmail);
 	private Pattern pAccount = Pattern.compile(regexAccount);
@@ -30,21 +30,19 @@ public class UserService {
 	
 	@Transactional
 	public KyAccount logon(KyAccount ka){
-		String propName = null;
 		String account = ka.getAccount();
 		if(pPhonenumb.matcher(account).matches()){
-			propName = "phonenumb";
-		}else
-		if(pEmail.matcher(account).matches()){
-			propName = "email";
-		}else
-		if(pAccount.matcher(account).matches()){
-			propName = "account";
-		}
-		if(propName == null){
+			ka.setPhonenumb(account);
+			ka.setAccount(null);
+		}else if(pEmail.matcher(account).matches()){
+			ka.setEmail(account);
+			ka.setAccount(null);
+		}else if(pAccount.matcher(account).matches()){
+			
+		}else{
 			return null;
 		}
-		List<KyAccount> list = dao.findByProperty(KyAccount.class, propName, account);
+		List<KyAccount> list = dao.findByExample(KyAccount.class, ka);
 		if(list != null && list.size() > 0){
 			return list.get(0);
 		}		

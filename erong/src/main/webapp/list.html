@@ -406,7 +406,7 @@
                     RenderTmpl({
                         Data: submitData,
                         TmplSource: "#tmpl_projectList", TmplTarget: "#projectList_search"
-                        , AfterFn: function (result) {
+                        , After: function (result) {
                             if (result.Data.TotalCount < 1) {
                                 $("#projectList_search").html('<div class="no-content"><p>无法找到符合筛选的结果 <input id="resetSel" type="button" class="ui-button-4" value="重置筛选标准"></p></div>');
                                 $("#pagerHolder").html("");

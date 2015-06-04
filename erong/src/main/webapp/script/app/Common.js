@@ -673,24 +673,24 @@ function RenderTmpl(config) {
             //alert("脚本执行异常，请刷新页面重试(ajax error)：" + err.statusText);
         },
         success: function (result) {
-        alert(result);
+            alert(result);
             var jsonResult = JSON.parse(result);
-            if (jsonResult.IsSuccess == true) {
-                if (config.SucessFn) {
-                    config.SucessFn(jsonResult);
+            if (jsonResult.code > 200) {
+                if (config.Sucess) {
+                    config.Sucess(jsonResult);
                 } else {
                     $(config.TmplTarget).html("");
                     $(config.TmplSource).tmpl(jsonResult).appendTo(config.TmplTarget);
                 }
             } else {
-                if (config.ErrorFn) {
-                    config.ErrorFn(jsonResult);
+                if (config.Error) {
+                    config.Error(jsonResult);
                 } else {
-                    alert(jsonResult.Message);
+                    alert(jsonResult.msg);
                 }
             }
-            if (config.AfterFn) {
-                config.AfterFn(jsonResult);
+            if (config.After) {
+                config.After(jsonResult);
             }
         }
     });

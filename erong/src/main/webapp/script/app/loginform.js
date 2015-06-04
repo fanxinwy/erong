@@ -97,10 +97,10 @@ $("[Qiantu_TxtUsername=Qiantu]").live("blur", function () {
     RenderTmpl({
         Data: submitData,
         Async: false,
-        SucessFn: function (result) {
+        Sucess: function (result) {
             $(show_error).hide();
         },
-        ErrorFn: function (result) {
+        Error: function (result) {
             ShowErrorMsg(l_Type, result.Message);
             $(this).focus();
             return false;
@@ -137,7 +137,7 @@ $("[Qiantu_BtnLogin=Qiantu]").live("click", function () {
         Url:'user/logon',
         Data: submitData,
         Async: false,
-        SucessFn: function (result) {
+        Sucess: function (result) {
             if (result.DicData != null) {
                 window.location.href = result.DicData.RequestUrl;
             }
@@ -145,8 +145,8 @@ $("[Qiantu_BtnLogin=Qiantu]").live("click", function () {
                 window.location.href = "index.html";
             }
         },
-        ErrorFn: function (result) {
-            ShowErrorMsg(l_Type, result.Message);
+        Error: function (result) {
+            ShowErrorMsg(l_Type, result.msg);
             if (result.DicData != null) {
                 $.ajax({
                     url: '/Account/LoginSendEmail',

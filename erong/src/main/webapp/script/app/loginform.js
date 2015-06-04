@@ -117,8 +117,6 @@ $("[Qiantu_BtnLogin=Qiantu]").live("click", function () {
     var chkbox = $("[Qiantu_Chkbox=Qiantu]").attr("checked");
 
     var url = UrlParamsToObject()["RequestUrl"];
-alert(url);
-    return;
     if (!UcsValidate.Mobile_EmailValidate(userName)) {
         ShowErrorMsg(l_Type, "请输入正确的手机号码！");
         return;
@@ -129,16 +127,14 @@ alert(url);
     }
 
     var submitData = {};
-    submitData.targetAction = "AccountLogin";
-    submitData.UserName = userName;
-    submitData.Pwd = pwd;
-    submitData.RequestUrl = url;
-    submitData.Chkbox = chkbox;
+    submitData.account = userName;
+    submitData.password = pwd;
     $("#btnLogin").attr("disabled", "1");
     $("#btnLogin").addClass("lg-submit-btn-gray");
     $("#btnLogin").attr("value", "登 录 中 ...");
 
     RenderTmpl({
+        Url:'user/logon',
         Data: submitData,
         Async: false,
         SucessFn: function (result) {

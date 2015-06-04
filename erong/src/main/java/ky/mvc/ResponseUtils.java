@@ -5,9 +5,9 @@ import java.util.Map;
 
 public class ResponseUtils {
 	
-	public static final String RES_CODE = "_code";
-	public static final String RES_MSG = "_msg";
-	public static final String RES_BODY = "_body";
+	public static final String RES_CODE = "code";
+	public static final String RES_MSG = "msg";
+	public static final String RES_BODY = "body";
 	
 	public static final int DEFAULT_CODE = 200;
 	public static final String DEFAULT_MSG = "success";

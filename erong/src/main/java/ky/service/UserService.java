@@ -15,8 +15,8 @@ public class UserService {
 	
 	@Autowired
 	private BaseDAO dao;
-	
-	public static final String regexPhonenumb = "^13[0-9]{9}$";
+	public static final String TOKEN = "$token";
+	public static final String regexPhonenumb = "^1[3-9][0-9]{9}$";
 	public static final String regexEmail = "^(\\w)+(\\.\\w+)*@(\\w)+((\\.\\w+)+)$";
 	public static final String regexAccount = "^[a-zA-Z_][a-zA-Z0-9]{3,15}$";
 	private Pattern pPhonenumb = Pattern.compile(regexPhonenumb);
@@ -28,7 +28,7 @@ public class UserService {
 		dao.save(KyAccount.class, ka);
 	}
 	
-	
+	@Transactional
 	public KyAccount logon(KyAccount ka){
 		String propName = null;
 		String account = ka.getAccount();

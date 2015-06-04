@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import ky.mvc.interceptor.annotation.AuthPassport;
+import ky.service.UserService;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.method.HandlerMethod;
@@ -21,7 +22,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
 			if(authPassport == null || authPassport.value() == false){
 				return true;
 			}else{
-				String token = (String) WebUtils.getSessionAttribute(request, "token");
+				String token = (String) WebUtils.getSessionAttribute(request, UserService.TOKEN);
 				if(!StringUtils.isEmpty(token)){
 					return true;
 				}else{

@@ -1,19 +1,20 @@
 package ky.mvc.controller;
 
-import java.util.HashMap;
-import java.util.Map;
-
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import ky.entity.KyAccount;
+import ky.mvc.ResponseUtils;
 import ky.service.UserService;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.util.WebUtils;
 
 @RestController
 @RequestMapping("user")
@@ -34,8 +35,16 @@ public class UserController {
 	}
 	
 	@RequestMapping(value="logon",method=RequestMethod.POST,headers="content-type=application/json")
-	public KyAccount logon(@RequestBody KyAccount body){
-		return userService.logon(body);
+	public Object logon(@RequestBody KyAccount body, HttpServletRequest request){
+		if(StringUtils.isEmpty(body.getAccount()) || StringUtils.isEmpty(body.getPassword())){
+			return ResponseUtils.createBody(500, "account or password could not be empty.");
+		}
+		KyAccount ka = userService.logon(body);
+		if(ka == null){
+			return ResponseUtils.createBody(501, "account is not exists or password is error.");
+		}
+		WebUtils.setSessionAttribute(request, UserService.TOKEN, ka.getAccount());
+		return ResponseUtils.createBody(ka);
 	}
 	
 	

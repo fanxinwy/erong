@@ -677,7 +677,6 @@ function RenderTmpl(config) {
             //alert("脚本执行异常，请刷新页面重试(ajax error)：" + err.statusText);
         },
         success: function (result) {
-            alert(result);
             var jsonResult = JSON.parse(result);
             if (jsonResult.code == 200) {
                 if (config.Sucess) {

@@ -1,5 +1,7 @@
-<!DOCTYPE html>
-<!-- saved from url=(0044)https://e.ydnsh.com/Account/RegisterByMobile -->
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%
+    String account = (String) session.getAttribute("$token");
+%>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -31,10 +33,16 @@
         <div class="header-top-right">
             <ul>
                 <li><a href="https://e.ydnsh.com/FAQ/introduction">帮助中心</a></li>
+<%if (account != null) {%>
+                <li><span>|</span>您好，<a href="/Center" class="blue"><%=account%>
+                </a>
+                    <a href="user/logout">退出</a></li>
+                <%} else {%>
                 <li>
-                    <input type="button" value="登录" class="ui-btn-1"></li>
+                    <input type="button" value="登录" class="ui-btn-1"/></li>
                 <li>
-                    <input type="button" value="注册" class="ui-btn-2"></li>
+                    <input type="button" value="注册" class="ui-btn-2"/></li>
+                <%}%>
             </ul>
             <div class="clear">
             </div>
@@ -332,14 +340,6 @@
             }
         });
         InitFloatTips();
-
-        $(".ui-btn-1").live("click", function () {
-            window.location.href = "/Account/Login";
-        });
-
-        $(".ui-btn-2").live("click", function () {
-            window.location.href = "/Account/Register";
-        });
     });
     //浮动
     $("#scrolltop").click(function () {

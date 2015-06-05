@@ -1,7 +1,8 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
-<!DOCTYPE html>
-<!-- saved from url=(0029)https://e.ydnsh.com/Home/List -->
-<html ng-app="app">
+<%
+    String account = (String) session.getAttribute("$token");
+%>
+<html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>我要投资_e融九州</title>
@@ -37,10 +38,16 @@
         <div class="header-top-right">
             <ul>
                 <li><a href="https://e.ydnsh.com/FAQ/introduction">帮助中心</a></li>
+                <%if (account != null) {%>
+                <li><span>|</span>您好，<a href="/Center" class="blue"><%=account%>
+                </a>
+                    <a href="user/logout">退出</a></li>
+                <%} else {%>
                 <li>
-                    <input type="button" value="登录" class="ui-btn-1"></li>
+                    <input type="button" value="登录" class="ui-btn-1"/></li>
                 <li>
-                    <input type="button" value="注册" class="ui-btn-2"></li>
+                    <input type="button" value="注册" class="ui-btn-2"/></li>
+                <%}%>
             </ul>
             <div class="clear">
             </div>
@@ -74,13 +81,6 @@
         $("#main-nav").find("li").removeClass("current");
         $("#main-nav").find("[nav=" + nav + "]").addClass("current");
 
-        $(".ui-btn-1").live("click", function () {
-            window.location.href = "/Account/Login";
-        });
-
-        $(".ui-btn-2").live("click", function () {
-            window.location.href = "/Account/Register";
-        });
         $(".mainNav-item").mouseover(function () {
             $(this).addClass("current")
             $(this).find(".sub-mainNav").show()
@@ -1379,7 +1379,7 @@
 <script id="tmpl_winOperateTip" type="text/x-jquery-tmpl">
 <div style="width: 440px;left:-220px;" class="prompt_inner ck_1">
     <h3 class="title">
-        <span class="icon_2">${}</span><a class="close" id="opwin_btn_close" href="javascript:void(0)"></a></h3>
+        <span class="icon_2"></span><a class="close" id="opwin_btn_close" href="javascript:void(0)"></a></h3>
     <div class="bank-alter-text">
         <p class="note-content" style="margin: 50px 0;text-align:center;font-size:14px;">
             ${message}</p>

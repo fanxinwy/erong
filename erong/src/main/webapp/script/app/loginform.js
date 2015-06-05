@@ -72,6 +72,18 @@ $(function () {
         });
     });
 });
+
+$(function () {
+  $(".ui-btn-1").live("click", function () {
+            window.location.href = "login.html";
+        });
+
+        $(".ui-btn-2").live("click", function () {
+            window.location.href = "reg.html";
+        });
+});
+
+
 function UrlParamsToObject() {
     var URLParams = {};
     var aParams = window.location.search.substr(1).split('&');

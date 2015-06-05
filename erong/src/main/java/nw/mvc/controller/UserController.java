@@ -1,6 +1,9 @@
 package nw.mvc.controller;
 
+import java.io.IOException;
+
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import nw.entity.NwAccount;
@@ -45,6 +48,18 @@ public class UserController {
 		}
 		WebUtils.setSessionAttribute(request, UserService.TOKEN, ka.getAccount());
 		return ResponseUtils.createBody(ka);
+	}
+	
+	@RequestMapping(value="logout",method=RequestMethod.GET)
+	public void logout( HttpServletRequest request,HttpServletResponse response){
+		WebUtils.setSessionAttribute(request, UserService.TOKEN, null);
+		try {
+			String basePath = request.getContextPath();
+			response.sendRedirect(basePath+"/login.html");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	

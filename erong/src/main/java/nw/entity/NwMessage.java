@@ -12,8 +12,8 @@ import javax.persistence.Table;
  * KyMessage entity. @author MyEclipse Persistence Tools
  */
 @Entity
-@Table(name = "ky_message", catalog = "erong")
-public class KyMessage implements java.io.Serializable {
+@Table(name = "nw_message", catalog = "erong")
+public class NwMessage implements java.io.Serializable {
 
 	// Fields
 
@@ -26,18 +26,18 @@ public class KyMessage implements java.io.Serializable {
 	// Constructors
 
 	/** default constructor */
-	public KyMessage() {
+	public NwMessage() {
 	}
 
 	/** minimal constructor */
-	public KyMessage(String title, String content, Timestamp msgdate) {
+	public NwMessage(String title, String content, Timestamp msgdate) {
 		this.title = title;
 		this.content = content;
 		this.msgdate = msgdate;
 	}
 
 	/** full constructor */
-	public KyMessage(String title, String content, Timestamp msgdate,
+	public NwMessage(String title, String content, Timestamp msgdate,
 			String msgtype) {
 		this.title = title;
 		this.content = content;

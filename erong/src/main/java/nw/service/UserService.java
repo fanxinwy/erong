@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 import nw.dao.BaseDAO;
-import nw.entity.KyAccount;
+import nw.entity.NwAccount;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -24,12 +24,12 @@ public class UserService {
 	private Pattern pAccount = Pattern.compile(regexAccount);
 	
 	@Transactional
-	public void save(KyAccount ka){
-		dao.save(KyAccount.class, ka);
+	public void save(NwAccount ka){
+		dao.save(NwAccount.class, ka);
 	}
 	
 	@Transactional
-	public KyAccount logon(KyAccount ka){
+	public NwAccount logon(NwAccount ka){
 		String account = ka.getAccount();
 		if(pPhonenumb.matcher(account).matches()){
 			ka.setPhonenumb(account);
@@ -42,7 +42,7 @@ public class UserService {
 		}else{
 			return null;
 		}
-		List<KyAccount> list = dao.findByExample(KyAccount.class, ka);
+		List<NwAccount> list = dao.findByExample(NwAccount.class, ka);
 		if(list != null && list.size() > 0){
 			return list.get(0);
 		}		

@@ -11,8 +11,8 @@ import javax.persistence.Table;
  * KyFinancing entity. @author MyEclipse Persistence Tools
  */
 @Entity
-@Table(name = "ky_financing", catalog = "erong")
-public class KyFinancing implements java.io.Serializable {
+@Table(name = "nw_financing", catalog = "erong")
+public class NwFinancing implements java.io.Serializable {
 
 	// Fields
 
@@ -32,11 +32,11 @@ public class KyFinancing implements java.io.Serializable {
 	// Constructors
 
 	/** default constructor */
-	public KyFinancing() {
+	public NwFinancing() {
 	}
 
 	/** full constructor */
-	public KyFinancing(String name, String province, String city,
+	public NwFinancing(String name, String province, String city,
 			String address, String business, String financinguse,
 			Float column8, Float column9, Float column10, String column11,
 			String column12) {

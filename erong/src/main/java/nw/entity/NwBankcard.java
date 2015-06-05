@@ -12,8 +12,8 @@ import javax.persistence.UniqueConstraint;
  * KyBankcard entity. @author MyEclipse Persistence Tools
  */
 @Entity
-@Table(name = "ky_bankcard", catalog = "erong", uniqueConstraints = @UniqueConstraint(columnNames = "cardnumb"))
-public class KyBankcard implements java.io.Serializable {
+@Table(name = "nw_bankcard", catalog = "erong", uniqueConstraints = @UniqueConstraint(columnNames = "cardnumb"))
+public class NwBankcard implements java.io.Serializable {
 
 	// Fields
 
@@ -29,18 +29,18 @@ public class KyBankcard implements java.io.Serializable {
 	// Constructors
 
 	/** default constructor */
-	public KyBankcard() {
+	public NwBankcard() {
 	}
 
 	/** minimal constructor */
-	public KyBankcard(Long aid, String cardnumb, String name) {
+	public NwBankcard(Long aid, String cardnumb, String name) {
 		this.aid = aid;
 		this.cardnumb = cardnumb;
 		this.name = name;
 	}
 
 	/** full constructor */
-	public KyBankcard(Long aid, String cardnumb, String name, String deposit,
+	public NwBankcard(Long aid, String cardnumb, String name, String deposit,
 			String depositprovince, String depositcity, String branch) {
 		this.aid = aid;
 		this.cardnumb = cardnumb;

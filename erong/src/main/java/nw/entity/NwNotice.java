@@ -14,8 +14,8 @@ import javax.persistence.TemporalType;
  * KyNotice entity. @author MyEclipse Persistence Tools
  */
 @Entity
-@Table(name = "ky_notice", catalog = "erong")
-public class KyNotice implements java.io.Serializable {
+@Table(name = "nw_notice", catalog = "erong")
+public class NwNotice implements java.io.Serializable {
 
 	// Fields
 
@@ -27,11 +27,11 @@ public class KyNotice implements java.io.Serializable {
 	// Constructors
 
 	/** default constructor */
-	public KyNotice() {
+	public NwNotice() {
 	}
 
 	/** full constructor */
-	public KyNotice(String title, String content, Date noticedate) {
+	public NwNotice(String title, String content, Date noticedate) {
 		this.title = title;
 		this.content = content;
 		this.noticedate = noticedate;

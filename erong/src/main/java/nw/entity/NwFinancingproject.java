@@ -14,8 +14,8 @@ import javax.persistence.TemporalType;
  * KyFinancingproject entity. @author MyEclipse Persistence Tools
  */
 @Entity
-@Table(name = "ky_financingproject", catalog = "erong")
-public class KyFinancingproject implements java.io.Serializable {
+@Table(name = "nw_financingproject", catalog = "erong")
+public class NwFinancingproject implements java.io.Serializable {
 
 	// Fields
 
@@ -32,11 +32,11 @@ public class KyFinancingproject implements java.io.Serializable {
 	// Constructors
 
 	/** default constructor */
-	public KyFinancingproject() {
+	public NwFinancingproject() {
 	}
 
 	/** minimal constructor */
-	public KyFinancingproject(String projectname, String projectcode,
+	public NwFinancingproject(String projectname, String projectcode,
 			Long issuingaid, Float expectincome, Float issuingtotal,
 			Float mininvest, Integer timelimit) {
 		this.projectname = projectname;
@@ -49,7 +49,7 @@ public class KyFinancingproject implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public KyFinancingproject(String projectname, String projectcode,
+	public NwFinancingproject(String projectname, String projectcode,
 			Long issuingaid, Float expectincome, Float issuingtotal,
 			Float mininvest, Integer timelimit, Date startdate) {
 		this.projectname = projectname;

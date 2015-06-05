@@ -20,10 +20,10 @@ import org.hibernate.validator.constraints.Email;
  * KyAccount entity. @author MyEclipse Persistence Tools
  */
 @Entity
-@Table(name = "ky_account", catalog = "erong", uniqueConstraints = {
+@Table(name = "nw_account", catalog = "erong", uniqueConstraints = {
 		@UniqueConstraint(columnNames = "account"),
 		@UniqueConstraint(columnNames = "phonenumb") })
-public class KyAccount implements java.io.Serializable {
+public class NwAccount implements java.io.Serializable {
 
 	// Fields
 
@@ -45,18 +45,18 @@ public class KyAccount implements java.io.Serializable {
 	// Constructors
 
 	/** default constructor */
-	public KyAccount() {
+	public NwAccount() {
 	}
 
 	/** minimal constructor */
-	public KyAccount(String account, String password, String phonenumb) {
+	public NwAccount(String account, String password, String phonenumb) {
 		this.account = account;
 		this.password = password;
 		this.phonenumb = phonenumb;
 	}
 
 	/** full constructor */
-	public KyAccount(String account, String password, String phonenumb,
+	public NwAccount(String account, String password, String phonenumb,
 			String accounttype, String email, String name, String idcardtype,
 			String idcard, String avatar, Integer integral,
 			Timestamp lastsignintime, String securequestion, String secureanswer) {

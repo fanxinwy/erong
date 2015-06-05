@@ -11,8 +11,8 @@ import javax.persistence.Table;
  * KyCurrentprojectincomedetail entity. @author MyEclipse Persistence Tools
  */
 @Entity
-@Table(name = "ky_currentprojectincomedetail", catalog = "erong")
-public class KyCurrentprojectincomedetail implements java.io.Serializable {
+@Table(name = "nw_currentprojectincomedetail", catalog = "erong")
+public class NwCurrentprojectincomedetail implements java.io.Serializable {
 
 	// Fields
 
@@ -25,17 +25,17 @@ public class KyCurrentprojectincomedetail implements java.io.Serializable {
 	// Constructors
 
 	/** default constructor */
-	public KyCurrentprojectincomedetail() {
+	public NwCurrentprojectincomedetail() {
 	}
 
 	/** minimal constructor */
-	public KyCurrentprojectincomedetail(Long pid, Long aid) {
+	public NwCurrentprojectincomedetail(Long pid, Long aid) {
 		this.pid = pid;
 		this.aid = aid;
 	}
 
 	/** full constructor */
-	public KyCurrentprojectincomedetail(Long pid, Long aid, Float currenttotal,
+	public NwCurrentprojectincomedetail(Long pid, Long aid, Float currenttotal,
 			Float currentincome) {
 		this.pid = pid;
 		this.aid = aid;

@@ -3,7 +3,7 @@ package nw.mvc.controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
-import nw.entity.KyAccount;
+import nw.entity.NwAccount;
 import nw.mvc.ResponseUtils;
 import nw.service.UserService;
 
@@ -25,7 +25,7 @@ public class UserController {
 	
 	
 	@RequestMapping(value="register",method=RequestMethod.POST,headers="content-type=application/json")
-	public KyAccount register(@Valid @RequestBody KyAccount body, BindingResult result){
+	public NwAccount register(@Valid @RequestBody NwAccount body, BindingResult result){
 		try {
 			userService.save(body);
 		} catch (Exception e) {
@@ -35,11 +35,11 @@ public class UserController {
 	}
 	
 	@RequestMapping(value="logon",method=RequestMethod.POST,headers="content-type=application/json")
-	public Object logon(@RequestBody KyAccount body, HttpServletRequest request){
+	public Object logon(@RequestBody NwAccount body, HttpServletRequest request){
 		if(StringUtils.isEmpty(body.getAccount()) || StringUtils.isEmpty(body.getPassword())){
 			return ResponseUtils.createBody(500, "account or password could not be empty.");
 		}
-		KyAccount ka = userService.logon(body);
+		NwAccount ka = userService.logon(body);
 		if(ka == null){
 			return ResponseUtils.createBody(501, "account is not exists or password is error.");
 		}

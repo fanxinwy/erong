@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import nw.entity.KyAccount;
+import nw.entity.NwAccount;
 
 import org.apache.commons.lang3.StringUtils;
 import org.hibernate.Query;
@@ -174,7 +174,7 @@ public class BaseDAO implements IBaseDAO {
 		Map<String, Object> m = new HashMap<>();
 		m.put("a", "1");
 		m.put("b", "2");
-		bd.findByProperties(KyAccount.class, m);
+		bd.findByProperties(NwAccount.class, m);
 	}
 	
 	

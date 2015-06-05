@@ -14,8 +14,8 @@ import javax.persistence.TemporalType;
  * KyCurrentprojectincome entity. @author MyEclipse Persistence Tools
  */
 @Entity
-@Table(name = "ky_currentprojectincome", catalog = "erong")
-public class KyCurrentprojectincome implements java.io.Serializable {
+@Table(name = "nw_currentprojectincome", catalog = "erong")
+public class NwCurrentprojectincome implements java.io.Serializable {
 
 	// Fields
 
@@ -27,11 +27,11 @@ public class KyCurrentprojectincome implements java.io.Serializable {
 	// Constructors
 
 	/** default constructor */
-	public KyCurrentprojectincome() {
+	public NwCurrentprojectincome() {
 	}
 
 	/** full constructor */
-	public KyCurrentprojectincome(Long cpid, Date incomedate, Float expectincome) {
+	public NwCurrentprojectincome(Long cpid, Date incomedate, Float expectincome) {
 		this.cpid = cpid;
 		this.incomedate = incomedate;
 		this.expectincome = expectincome;

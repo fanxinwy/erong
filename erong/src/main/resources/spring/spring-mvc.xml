@@ -13,13 +13,18 @@
 	<mvc:annotation-driven validator="validator" />
 	<mvc:default-servlet-handler />
 	
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+	
 	<mvc:interceptors>
 		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" />
 		<bean class="nw.mvc.interceptor.AuthInterceptor" />
 	</mvc:interceptors>
 	
 	<!-- <mvc:annotation-driven validator="validator" /> -->
-	<!-- <mvc:view-controller path="/" view-name="forward:/index.html" /> -->
+	<!-- <mvc:view-controller path="/" view-name="forward:index" /> -->
 	<!-- <mvc:view-controller path="/" view-name="redirect:index.html"/> -->
 	
 	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">

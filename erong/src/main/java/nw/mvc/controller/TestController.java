@@ -1,6 +1,7 @@
 package nw.mvc.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -12,9 +13,9 @@ public class TestController {
 		return "index";
 	}
 	
-	@RequestMapping(value = "/index.html", method = RequestMethod.GET)
-	public String index2() {
-		return "index";
+	@RequestMapping(value = "/{page}.html", method = RequestMethod.GET)
+	public String index3(@PathVariable String page) {
+		return page;
 	}
 
 }

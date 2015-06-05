@@ -7,7 +7,7 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-	<context:component-scan base-package="ky.mvc.controller,ky.dao,ky.service" />
+	<context:component-scan base-package="nw.mvc.controller,nw.dao,nw.service" />
 
 	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
 	<mvc:annotation-driven validator="validator" />
@@ -15,7 +15,7 @@
 	
 	<mvc:interceptors>
 		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" />
-		<bean class="ky.mvc.interceptor.AuthInterceptor" />
+		<bean class="nw.mvc.interceptor.AuthInterceptor" />
 	</mvc:interceptors>
 	
 	<!-- <mvc:annotation-driven validator="validator" /> -->

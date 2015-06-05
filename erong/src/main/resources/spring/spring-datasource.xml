@@ -37,10 +37,10 @@
 			<value>classpath:mappings/**/*.hbm.xml</value>
 		</property>
 		<property name="mappingJarLocations">
-			<value>WEB-INF/lib/ky*.jar</value>
+			<value>WEB-INF/lib/nw*.jar</value>
 		</property>
 		<property name="packagesToScan">
-			<value>ky.entity</value>
+			<value>nw.entity</value>
 		</property>
 		<property name="hibernateProperties">
 			<props>

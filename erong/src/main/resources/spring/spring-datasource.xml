@@ -10,7 +10,7 @@
 		<property name="url"
 			value="jdbc:mysql://127.0.0.1:3306/erong?useUnicode=true&amp;characterEncoding=UTF-8" />
 		<property name="username" value="root" />
-		<property name="password" value="dev123" />
+		<property name="password" value="bsoft" />
 		<property name="filters" value="stat" />
 		<property name="maxActive" value="200" />
 		<property name="initialSize" value="5" />

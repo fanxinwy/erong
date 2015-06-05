@@ -1,15 +1,6 @@
-<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
-<%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-HttpSession ss=request.getSession(false);
-  System.out.println("================="+session.getAttribute("$token"));
-  
-%>
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-<head>
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head ng-controller="common">
     <title>{{title}}</title>
     <meta content="{{keywords}}" name="keywords" />
     <meta content="{{description}}" name="description" />
@@ -1503,7 +1494,7 @@ HttpSession ss=request.getSession(false);
 <script id="tmpl_winOperateTip" type="text/x-jquery-tmpl">
 <div style="width: 440px;left:-220px;" class="prompt_inner ck_1">
     <h3 class="title">
-        <span class="icon_2"></span><a class="close" id="opwin_btn_close" href="javascript:void(0)"></a></h3>
+        <span class="icon_2">${TryStr(title,"系统提示")}</span><a class="close" id="opwin_btn_close" href="javascript:void(0)"></a></h3>
     <div class="bank-alter-text">
         <p class="note-content" style="margin: 50px 0;text-align:center;font-size:14px;">
             ${message}</p>
@@ -1522,3 +1513,4 @@ HttpSession ss=request.getSession(false);
 
 </body>
 </html>
+

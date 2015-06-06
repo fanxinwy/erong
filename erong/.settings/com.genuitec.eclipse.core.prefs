@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+validator.Checked=src/main/webapp/script/lib/angular.min.js,src/main/webapp/WEB-INF/views/reg.jsp
+validator.Unchecked=

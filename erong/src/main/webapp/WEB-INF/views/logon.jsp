@@ -8,5 +8,8 @@
 </head>
 <body>
 	This is my logon page. <br>
+	<h1><%=request.getAttribute("name")%></h1>
+	<h1><%=request.getAttribute("age")%></h1>
+	
 </body>
 </html>

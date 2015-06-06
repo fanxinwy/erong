@@ -1,25 +1,24 @@
 package nw.mvc.controller;
 
-import java.io.IOException;
-
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import nw.entity.NwAccount;
-import nw.mvc.ResponseUtils;
+import static nw.mvc.ResponseUtils.*;
 import nw.service.UserService;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.util.WebUtils;
 
-@RestController
+@Controller
 @RequestMapping("user")
 public class UserController {
 
@@ -38,28 +37,32 @@ public class UserController {
 	}
 
 	@RequestMapping(value = "logon", method = RequestMethod.POST, headers = "content-type=application/json")
-	public Object logon(@RequestBody NwAccount body, HttpServletRequest request) {
+	public ModelAndView logon(@RequestBody NwAccount body, HttpServletRequest request) {
 		if (StringUtils.isEmpty(body.getAccount()) || StringUtils.isEmpty(body.getPassword())) {
-			return ResponseUtils.createBody(501, "account or password could not be empty.");
+			return jsonView(501, "account or password could not be empty.");
 		}
 		NwAccount ka = userService.logon(body);
 		if (ka == null) {
-			return ResponseUtils.createBody(502, "account is not exists or password is error.");
+			return jsonView(502, "account is not exists or password is error.");
 		}
-		WebUtils.setSessionAttribute(request, UserService.TOKEN, ka.getAccount());
-		return ResponseUtils.createBody(ka);
+		WebUtils.setSessionAttribute(request, UserService.TOKEN, ka.getId());
+		WebUtils.setSessionAttribute(request, UserService.USERNAME, ka.getAccount());
+		WebUtils.setSessionAttribute(request, UserService.PHONENUMBER, ka.getPhonenumb());
+		return modelView("index");
 	}
 
 	@RequestMapping(value = "logout", method = RequestMethod.GET)
-	public void logout(HttpServletRequest request, HttpServletResponse response) {
+	public String logout(HttpServletRequest request) {
+		/*
 		WebUtils.setSessionAttribute(request, UserService.TOKEN, null);
-		try {
-			String basePath = request.getContextPath();
-			response.sendRedirect(basePath + "/login.html");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		WebUtils.setSessionAttribute(request, UserService.USERNAME, null);
+		WebUtils.setSessionAttribute(request, UserService.PHONENUMBER, null);
+		*/
+		HttpSession session = request.getSession(false);
+		if(session != null){
+			session.invalidate();
 		}
+		return "login";
 	}
 
 }

@@ -28,7 +28,6 @@ public class CodeController {
 	@ResponseBody
 	public void shortMessage(HttpSession session, @PathVariable String phonenumb) {
 		session.setAttribute(VariableNames.MSG_VERIFY_CODE, messageProcessor.getCode(phonenumb));
-		System.out.println(session);
 	}
 
 	@RequestMapping(value = "image", method = RequestMethod.GET)

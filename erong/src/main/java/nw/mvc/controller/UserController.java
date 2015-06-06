@@ -1,6 +1,9 @@
 package nw.mvc.controller;
 
+import java.io.IOException;
+
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import nw.entity.NwAccount;
@@ -19,33 +22,44 @@ import org.springframework.web.util.WebUtils;
 @RestController
 @RequestMapping("user")
 public class UserController {
-	
+
 	@Autowired
 	private UserService userService;
-	
-	
-	@RequestMapping(value="register",method=RequestMethod.POST,headers="content-type=application/json")
-	public NwAccount register(@Valid @RequestBody NwAccount body, BindingResult result){
+
+	@RequestMapping(value = "register", method = RequestMethod.POST, headers = "content-type=application/json")
+	public NwAccount register(@Valid @RequestBody NwAccount body, BindingResult result) {
 		try {
 			userService.save(body);
 		} catch (Exception e) {
-			System.out.println("---"+e.getMessage());
-			System.out.println("==="+e.getCause().getMessage());
+			System.out.println("---" + e.getMessage());
+			System.out.println("===" + e.getCause().getMessage());
 		}
 		return body;
 	}
-	
-	@RequestMapping(value="logon",method=RequestMethod.POST,headers="content-type=application/json")
-	public Object logon(@RequestBody NwAccount body, HttpServletRequest request){
-		if(StringUtils.isEmpty(body.getAccount()) || StringUtils.isEmpty(body.getPassword())){
+
+	@RequestMapping(value = "logon", method = RequestMethod.POST, headers = "content-type=application/json")
+	public Object logon(@RequestBody NwAccount body, HttpServletRequest request) {
+		if (StringUtils.isEmpty(body.getAccount()) || StringUtils.isEmpty(body.getPassword())) {
 			return ResponseUtils.createBody(501, "account or password could not be empty.");
 		}
 		NwAccount ka = userService.logon(body);
-		if(ka == null){
+		if (ka == null) {
 			return ResponseUtils.createBody(502, "account is not exists or password is error.");
 		}
 		WebUtils.setSessionAttribute(request, UserService.TOKEN, ka.getAccount());
 		return ResponseUtils.createBody(ka);
+	}
+
+	@RequestMapping(value = "logout", method = RequestMethod.GET)
+	public void logout(HttpServletRequest request, HttpServletResponse response) {
+		WebUtils.setSessionAttribute(request, UserService.TOKEN, null);
+		try {
+			String basePath = request.getContextPath();
+			response.sendRedirect(basePath + "/login.html");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

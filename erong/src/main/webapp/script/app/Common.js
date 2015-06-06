@@ -1,4 +1,8 @@
-﻿//公用脚本
+﻿
+var errorcode = {
+    501: "密码错误"
+};
+//公用脚本
 /**
 *Ajax返回处理函数
 **/
@@ -673,9 +677,8 @@ function RenderTmpl(config) {
             //alert("脚本执行异常，请刷新页面重试(ajax error)：" + err.statusText);
         },
         success: function (result) {
-            alert(result);
             var jsonResult = JSON.parse(result);
-            if (jsonResult.code > 200) {
+            if (jsonResult.code == 200) {
                 if (config.Sucess) {
                     config.Sucess(jsonResult);
                 } else {

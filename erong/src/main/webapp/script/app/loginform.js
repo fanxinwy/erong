@@ -72,6 +72,18 @@ $(function () {
         });
     });
 });
+
+$(function () {
+  $(".ui-btn-1").live("click", function () {
+            window.location.href = "login.html";
+        });
+
+        $(".ui-btn-2").live("click", function () {
+            window.location.href = "reg.html";
+        });
+});
+
+
 function UrlParamsToObject() {
     var URLParams = {};
     var aParams = window.location.search.substr(1).split('&');
@@ -146,10 +158,10 @@ $("[Qiantu_BtnLogin=Qiantu]").live("click", function () {
             }
         },
         Error: function (result) {
-            ShowErrorMsg(l_Type, result.msg);
+            ShowErrorMsg(l_Type, errorcode[result.code] || result.msg);
             if (result.DicData != null) {
                 $.ajax({
-                    url: '/Account/LoginSendEmail',
+                    url: '/user/sendMail',
                     type: 'post',
                     data: result.DicData,
                     dataType: 'text',

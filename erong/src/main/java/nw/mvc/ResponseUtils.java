@@ -32,7 +32,6 @@ public class ResponseUtils {
 		MappingJackson2JsonView jv = new MappingJackson2JsonView();
 		jv.setAttributesMap(data);
 		ModelAndView mv = new ModelAndView(jv);
-		mv.addObject("");
 		return mv;
 	}
 	

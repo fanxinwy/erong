@@ -116,7 +116,6 @@ public class NwAccount implements java.io.Serializable {
 	}
 
 	@Column(name = "accounttype", length = 1)
-	@NotNull(message = "account can not be empty")
 	public String getAccounttype() {
 		return this.accounttype;
 	}

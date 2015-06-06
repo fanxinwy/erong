@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 import nw.service.UserService;
@@ -20,8 +21,7 @@ import org.hibernate.validator.constraints.Email;
  * KyAccount entity. @author MyEclipse Persistence Tools
  */
 @Entity
-@Table(name = "nw_account", catalog = "erong", uniqueConstraints = {
-		@UniqueConstraint(columnNames = "account"),
+@Table(name = "nw_account", catalog = "erong", uniqueConstraints = { @UniqueConstraint(columnNames = "account"),
 		@UniqueConstraint(columnNames = "phonenumb") })
 public class NwAccount implements java.io.Serializable {
 
@@ -56,10 +56,9 @@ public class NwAccount implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public NwAccount(String account, String password, String phonenumb,
-			String accounttype, String email, String name, String idcardtype,
-			String idcard, String avatar, Integer integral,
-			Timestamp lastsignintime, String securequestion, String secureanswer) {
+	public NwAccount(String account, String password, String phonenumb, String accounttype, String email, String name,
+			String idcardtype, String idcard, String avatar, Integer integral, Timestamp lastsignintime,
+			String securequestion, String secureanswer) {
 		this.account = account;
 		this.password = password;
 		this.phonenumb = phonenumb;
@@ -88,7 +87,7 @@ public class NwAccount implements java.io.Serializable {
 	}
 
 	@Column(name = "account", unique = true, nullable = false, length = 30)
-	@Pattern(regexp=UserService.regexAccount,message="account is not valid")
+	@Pattern(regexp = UserService.regexAccount, message = "account is not valid")
 	public String getAccount() {
 		return this.account;
 	}
@@ -107,7 +106,7 @@ public class NwAccount implements java.io.Serializable {
 	}
 
 	@Column(name = "phonenumb", unique = true, nullable = false, length = 11)
-	@Pattern(regexp=UserService.regexPhonenumb,message="phone is not valid")
+	@Pattern(regexp = UserService.regexPhonenumb, message = "phone is not valid")
 	public String getPhonenumb() {
 		return this.phonenumb;
 	}
@@ -117,6 +116,7 @@ public class NwAccount implements java.io.Serializable {
 	}
 
 	@Column(name = "accounttype", length = 1)
+	@NotNull(message = "account can not be empty")
 	public String getAccounttype() {
 		return this.accounttype;
 	}
@@ -126,7 +126,7 @@ public class NwAccount implements java.io.Serializable {
 	}
 
 	@Column(name = "email", length = 50)
-	@Email(message="email is not valid")
+	@Email(message = "email is not valid")
 	public String getEmail() {
 		return this.email;
 	}

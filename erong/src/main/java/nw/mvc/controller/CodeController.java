@@ -7,8 +7,9 @@ import javax.servlet.http.HttpSession;
 
 import nw.verification.VariableNames;
 import nw.verification.image.VerifyCodeUtils;
-import nw.verification.message.support.DefaultMessageProcessor;
+import nw.verification.message.MessageProcessor;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,12 +20,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping("code")
 public class CodeController {
+	
+	@Autowired
+	private MessageProcessor messageProcessor;
 
 	@RequestMapping(value = "phone/{phonenumb}", method = RequestMethod.GET)
 	@ResponseBody
 	public void shortMessage(HttpSession session, @PathVariable String phonenumb) {
-		session.setAttribute(VariableNames.MSG_VERIFY_CODE, new DefaultMessageProcessor().getCode(phonenumb, 4));
-		System.out.println(phonenumb);
+		session.setAttribute(VariableNames.MSG_VERIFY_CODE, messageProcessor.getCode(phonenumb));
+		System.out.println(session);
 	}
 
 	@RequestMapping(value = "image", method = RequestMethod.GET)

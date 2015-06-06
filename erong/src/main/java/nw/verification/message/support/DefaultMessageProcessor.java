@@ -1,19 +1,26 @@
 package nw.verification.message.support;
 
+import nw.verification.image.VerifyCodeUtils;
 import nw.verification.message.MessageProcessor;
 
 public class DefaultMessageProcessor implements MessageProcessor {
+	
+	private int defaultCodeLength = 4;
+	protected static final String VERIFY_CODES = "1234567890";
 
 	@Override
 	public String getCode(String phoneNumber) {
-		// TODO Auto-generated method stub
-		return getCode(phoneNumber, 4);
+		return getCode(phoneNumber, defaultCodeLength);
 	}
 
 	@Override
 	public String getCode(String phoneNumber, int codeLength) {
-		// TODO Auto-generated method stub
-		return "2345";
+		return VerifyCodeUtils.generateVerifyCode(codeLength, VERIFY_CODES);
+	}
+	
+	@Override
+	public void setDefaultCodeLength(int length) {
+		defaultCodeLength = length;		
 	}
 
 }

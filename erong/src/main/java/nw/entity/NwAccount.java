@@ -10,7 +10,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 import nw.service.UserService;
@@ -86,7 +85,7 @@ public class NwAccount implements java.io.Serializable {
 		this.id = id;
 	}
 
-	@Column(name = "account", unique = true, nullable = false, length = 30)
+	@Column(name = "account", unique = true, length = 30)
 	@Pattern(regexp = UserService.regexAccount, message = "account is not valid")
 	public String getAccount() {
 		return this.account;
@@ -96,7 +95,7 @@ public class NwAccount implements java.io.Serializable {
 		this.account = account;
 	}
 
-	@Column(name = "password", nullable = false, length = 30)
+	@Column(name = "password", nullable = false, length = 50)
 	public String getPassword() {
 		return this.password;
 	}

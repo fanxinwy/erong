@@ -7,10 +7,10 @@ import nw.dao.BaseDAO;
 import nw.entity.NwAccount;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-@Repository
+@Service
 public class UserService {
 	
 	@Autowired
@@ -44,6 +44,7 @@ public class UserService {
 		}else{
 			return null;
 		}
+		System.out.println(ka);
 		List<NwAccount> list = dao.findByExample(NwAccount.class, ka);
 		if(list != null && list.size() > 0){
 			return list.get(0);

@@ -14,9 +14,7 @@
 			<security:password-encoder ref="passwordEncoder" />
 		</security:authentication-provider>
 	</security:authentication-manager>
-
-	<bean id="passwordEncoder" class="org.springframework.security.authentication.encoding.Md5PasswordEncoder" />
-
+	
 	<bean id="userDetailsService" class="nw.security.CustomUserDetailsService" />
 
 </beans>
